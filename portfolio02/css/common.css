@@ -1,0 +1,594 @@
+@charset "utf-8";
+html, body {
+    width: 100%;
+/*    height: 100%;*/
+    font-family: 'Roboto','Noto Sans KR',sans-serif;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/*1. 헤더영역*/
+.header {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+}
+.header .header_box {
+    height: 100%;
+    /*포지션 위치값*/
+    position: relative;
+}
+.header .logo {
+    /*포지션*/
+    position: absolute;
+    left: 50%;
+    top: 56px;
+    transform: translateX(-50%);
+}
+.header .logo img {
+    width: 40px;
+}
+.header input[id="menu_button"]{
+    display: none;
+}
+.header label {
+    width: 20px;
+    height: 20px;
+    /*포지션*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+/*햄버거 메뉴 CSS*/
+.header label .bars {
+    width: 100%;
+    height: 100%;
+    /*포지션 위치값*/
+    position: relative;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+.header label .bars span {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    /*포지션*/
+    position: absolute;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+.header label .bars span:nth-child(1){
+    top: 0;
+}
+.header label .bars span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header label .bars span:nth-child(3){
+    bottom: 0;
+}
+/*데이 나이트 버튼 CSS*/
+.header .daynight_btn {
+    /*포지션*/
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.header .daynight_btn .button_box {
+    width: 32px;
+    height: 18px;
+    background-color: #f3f5f6;
+    border: 1px solid #14181b;
+    border-radius: 9px;
+    /*포지션 위치값*/
+    position: relative;
+}
+.header .daynight_btn .button_box .button_circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #14181b;
+    /*포지션*/
+    position: absolute;
+    top: 2px;
+}
+.header .daynight_btn .button_box p {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 500;
+}
+
+/*햄버거메뉴 클릭시 애니메이션*/
+input[id="menu_button"]:checked+label .bars {
+    transform: scale(1.5) rotate(180deg);
+}
+input[id="menu_button"]:checked+label .bars span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menu_button"]:checked+label .bars span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menu_button"]:checked+label .bars span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/*2. 왼쪽 GNB 영역*/
+.left_gnb {
+    width: 1960px;
+    height: 100%;
+    /*포지션 위치값*/
+    position: fixed;
+    left: -1760px;
+    z-index: 99;
+}
+.left_gnb .gnb_menu {
+    height: 100%;
+    /*포지션 위치값*/
+    position: relative;
+}
+.left_gnb .gnb_menu ul {
+    /*포지션*/
+    position: absolute;
+    left: 18.93939393939394%;
+    top: 53%;
+    transform: translateY(-50%);
+}
+.left_gnb .gnb_menu ul li {
+    width: 200px;
+    padding: 20px 0 20px 20px;
+    height: 80px;
+    opacity: 0;
+}
+.left_gnb .gnb_menu ul li a {
+    display: block;
+    font-size: 44px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.left_gnb .gnb_menu ul li:hover a {
+    color: #f47e27;
+    font-size: 48px;
+}
+
+/*3. 우측 상단 GNB 영역*/
+.top_gnb {
+    width: 73.48484848484848%;
+    margin-left: 18.93939393939394%;
+    padding-top: 66px;
+}
+.top_gnb .name {
+    width: 100px;
+    height: 20px;
+    /*플롯*/
+    float: left;
+    /*포지션 위치값*/
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.top_gnb .name a {
+    font-size: 18px;
+    font-weight: 500;
+    /*포지션*/
+    position: absolute;
+    transition: all 0.3s;
+}
+.top_gnb .name a:nth-child(1){
+    top: 0;
+}
+.top_gnb .name a:nth-child(2){
+    top: 22px;
+    left: 18px;
+}
+.top_gnb .name:hover a:nth-child(1){
+    top: -22px;
+    color: inherit;
+}
+.top_gnb .name:hover a:nth-child(2){
+    top: 0;
+    color: inherit;
+}
+.top_gnb ul {
+    width: 50%;
+    /*플롯*/
+    float: right;
+}
+.top_gnb ul li {
+    /*플롯*/
+    float: right;
+    margin-left: 4.545454545454545%;
+}
+.top_gnb ul li a {
+    font-weight: 500;
+    font-size: 18px;
+}
+.top_gnb a {
+    transition: 0.3s;
+}
+.top_gnb a:hover {
+    color: #f47e27;
+}
+
+/*top버튼 영역*/
+.top_button {
+    position: fixed;
+    top: 87%;
+    right: 20px;
+    z-index: 90;
+    cursor: pointer;
+    animation-name: top_allow;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.top_button img {
+    width: 35px;
+    opacity: .5;
+    transition: 0.5s;
+}
+.top_button img:hover {
+    transform: scale(1.2);
+}
+
+/*4. 컨텐츠 영역*/
+#content {
+    width: 73.48484848484848%;
+    margin-left: 18.93939393939394%;
+}
+#content .main_text {
+    margin-top: 250px;
+    height: 300px;
+    /*포지션 위치값*/
+    position: relative;
+}
+#content .main_text h2 {
+    /*포지션*/
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+#content .main_text h2:nth-child(2){
+    top: 140px;
+}
+#content .main_text h2:nth-child(3){
+    top: 230px;
+}
+
+/*4-n. 컨택트 영역*/
+#content .contact {
+    width: 100%;
+    margin-top: 320px;
+    padding-bottom: 600px;
+    /*포지션 위치값*/
+    position: relative;
+}
+#content .contact .contact_box {
+    width: 26%;
+    /*포지션*/
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#content .contact .contact_box h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+}
+#content .contact .icon_box {
+    width: 28%;
+    float: left;
+    margin-right: 8%;
+}
+#content .contact .icon_box:last-child {
+    margin-right: 0;
+}
+#content .contact img {
+    width: 100%;
+    margin-bottom: 24px;
+}
+#content .contact p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+/*반응형 태블릿 첫번째 영역*/
+@media screen and (min-width: 1061px) and (max-width: 1310px){
+    /*1. 헤더영역*/
+    .header {
+        width: 140px;
+    }
+    
+    #content .main_text h2{
+        font-size: 58px;
+    }
+    
+    /*2. 왼쪽 GNB 영역*/
+    .left_gnb {
+        width: 1960px;
+        height: 100%;
+        /*포지션 위치값*/
+        position: fixed;
+        left: -1820px;
+        z-index: 99;
+    }
+    
+    /*4-n. 컨택트 영역*/
+    #content .contact p {
+        display: none;
+    }
+}
+
+
+
+/*반응형 태블릿 두번째 영역*/
+@media screen and (min-width: 749px) and (max-width: 1060px){
+    /*1. 헤더영역*/
+    .header {
+        width: 100%;
+        height: 64px;
+    }
+    .header .logo {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .header .logo img {
+        width: 32px;
+    }
+    .header label {
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    /*데이 나이트 버튼 CSS*/
+    .header .daynight_btn {
+        bottom: 50%;
+        left: inherit;
+        right: 16px;
+        transform: translateY(50%);
+    }
+    .header .daynight_btn .button_box p {
+        /*모바일에서는 텍스트 가리기*/
+        display: none;
+    }
+
+    /*2. 왼쪽 GNB 영역*/
+    .left_gnb {
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        border-right: none;
+    }
+    .left_gnb .gnb_menu ul li {
+        height: 60px;
+    }
+    .left_gnb .gnb_menu ul li a {
+        font-size: 32px;
+    }
+    .left_gnb .gnb_menu ul li:hover a {
+        color: #f47e27;
+        font-size: 36px;
+    }
+    
+    /*top GNB 영역*/
+    .top_gnb {
+        display: none;
+    }
+    
+    /*4. 컨텐츠, 메인 텍스트 영역*/
+    #content {
+        width: 100%;
+        margin-left: 0;
+    }
+    #content .main_text {
+        width: 86%;
+        margin: 0 auto;
+        margin-top: 224px;
+        height: 180px;
+    }
+    #content .main_text h2 {
+        font-size: 48px;
+    }
+    #content .main_text h2:nth-child(2){
+        top: 108px;
+    }
+    #content .main_text h2:nth-child(3){
+        top: 166px;
+    }
+    
+    /*4-n. 컨택트 영역*/
+    #content .contact {
+        width: 100%;
+        margin-top: 160px;
+        padding-bottom: 360px;
+    }
+    #content .contact .contact_box {
+        width: 36%;
+    }
+    #content .contact .contact_box h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    #content .contact .icon_box {
+        width: 24%;
+        margin-right: 14%;
+    }
+    #content .contact p {
+        display: none;
+    }
+}
+
+
+
+/*반응형 모바일 영역*/
+@media screen and (max-width: 748px){
+    /*1. 헤더영역*/
+    .header {
+        width: 100%;
+        height: 64px;
+    }
+    .header .logo {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .header .logo img {
+        width: 32px;
+    }
+    .header label {
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    /*데이 나이트 버튼 CSS*/
+    .header .daynight_btn {
+        bottom: 50%;
+        left: inherit;
+        right: 16px;
+        transform: translateY(50%);
+    }
+    .header .daynight_btn .button_box p {
+        /*모바일에서는 텍스트 가리기*/
+        display: none;
+    }
+
+    /*2. 왼쪽 GNB 영역*/
+    .left_gnb {
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        border-right: none;
+    }
+    .left_gnb .gnb_menu ul li {
+        height: 40px;
+    }
+    .left_gnb .gnb_menu ul li a {
+        font-size: 24px;
+    }
+    .left_gnb .gnb_menu ul li:hover a {
+        color: #f47e27;
+        font-size: 28px;
+    }
+    
+    /*top GNB 영역*/
+    .top_gnb {
+        display: none;
+    }
+    
+    /*top 버튼 영역*/
+    .top_button img {
+        width: 30px;
+    }
+    
+    /*4. 컨텐츠, 메인 텍스트 영역*/
+    #content {
+        width: 100%;
+        margin-left: 0;
+    }
+    #content .main_text {
+        width: 86%;
+        margin: 0 auto;
+        margin-top: 224px;
+        height: 180px;
+    }
+    #content .main_text h2 {
+        font-size: 24px;
+    }
+    #content .main_text h2:nth-child(2){
+        top: 82px;
+    }
+    #content .main_text h2:nth-child(3){
+        top: 114px;
+    }
+    
+    /*4-n. 컨택트 영역*/
+    #content .contact {
+        width: 100%;
+        margin-top: 160px;
+        padding-bottom: 360px;
+    }
+    #content .contact .contact_box {
+        width: 50%;
+    }
+    #content .contact .contact_box h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    #content .contact .icon_box {
+        width: 24%;
+        margin-right: 14%;
+    }
+    #content .contact p {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
