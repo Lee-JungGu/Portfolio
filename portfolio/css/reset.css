@@ -1,0 +1,74 @@
+@charset 'utf-8';
+/* 웹폰트 CSS*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|PT+Serif');
+/* CSS불러오기*/
+@import url('font.css');
+/* CSS 초기화*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, cite, code, del, em, img, ins, q, small, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, section, summary, time, mark, audio, video, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+/* body에 폰트 속성,배경 속성, 글자 행간 속성 설정*/
+body {
+/*    font-family: 'Montserrat',sans-serif;*/
+    line-height: 1;
+}
+/* 새로운 html5 태그 IE 구버전에서 정상적으로 작동하도록 설정*/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+/* li 관련 속성*/
+ul,li {
+    list-style: none;
+}
+/* a요소 초기화*/
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+/* img 태그간 간격을 없애기 위해 설정*/
+img {
+    vertical-align: top;
+    text-decoration: none;
+}
+/* hr 요소*/
+hr {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 2px;
+    border: 0;
+}
+/* input 요소 textarea*/
+input, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+/*    border-bottom: 1px solid #757575;*/
+    color: #3f51b5;
+    width: 100%;
+/*    font-family: 'Montserrat';*/
+/*    font-size: 12px;*/
+    vertical-align: top;
+    border-radius: 0;   
+}
+/* 플롯 해제*/
+.cf:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* IE 8이하 버전 float해제*/
+.clear_both {
+    zoom:1;
+}

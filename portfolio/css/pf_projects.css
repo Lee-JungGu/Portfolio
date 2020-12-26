@@ -1,0 +1,112 @@
+@charset "utf-8";
+/*4-2. 프로젝트 영역*/
+#content .projects {
+    padding-bottom: 200px;
+    margin-top: 260px;
+}
+#content .projects>h2 {
+    margin-bottom: 60px;
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+#content .projects .project_line {
+    width: 100%;
+    margin-bottom: 80px;
+}
+#content .projects .project_line:last-child {
+    margin-bottom: 0;
+}
+#content .projects .project_line .project_box {
+    margin-right: 4%;
+    width: 48%;
+    /*플롯*/
+    float: left;
+    text-align: center;
+}
+#content .projects .project_line .project_box:last-child {
+    margin-right: 0;
+}
+#content .projects .project_line .project_box h2 {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 500;
+}
+#content .projects .project_line .project_box p {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: keep-all;
+    width: 60%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#content .projects .project_line .project_box a {
+    display: block;
+    width: 100%;      
+    box-shadow: 7px 7px 7px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+#content .projects .project_line .project_box a img {
+    width: 100%;
+    transition: all 0.5s;
+    transform: scale(1.01);
+}
+#content .projects .project_line .project_box a img:hover {
+    transform: scale(1.1);
+}
+
+/*반응형 태블릿 두번째 영역*/
+@media screen and (min-width: 749px) and (max-width: 1060px){
+    /*4-2. 프로젝트 영역*/
+    #content .projects {
+        margin-top: 160px;
+        padding: 0 16px;
+        padding-bottom: 160px;
+    }
+    #content .projects>h2 {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+    #content .projects .project_line {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    #content .projects .project_line .project_box h2 {
+        font-size: 20px;
+    }
+}
+
+/*반응형 모바일 영역*/
+@media screen and (max-width: 748px){
+    /*4-2. 프로젝트 영역*/
+    #content .projects {
+        margin-top: 60px;
+        padding: 0 16px;
+        padding-bottom: 120px;
+    }
+    #content .projects>h2 {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+    #content .projects .project_line {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    #content .projects .project_line .project_box {
+        width: 100%;
+        margin-right: 0;
+        /*플롯*/
+        float: none;
+    }
+    #content .projects .project_line .project_box h2 {
+        font-size: 20px;
+    }
+    #content .projects .project_line .project_box p {
+        margin-bottom: 60px;
+    }
+    #content .projects .project_line:last-child .project_box:last-child p {
+        margin-bottom: 0;
+    }
+}
