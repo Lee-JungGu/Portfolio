@@ -4,31 +4,31 @@ var includeHtmls = {
         $(targetTagName).load(htmlUrl, targetTagFunction);
     },
     includeTopSnb: function(){
-        this.includeHtml(".top_snb", "../include/top_snb.js");
+        this.includeHtml(".top_snb", "include/top_snb.js");
     },
     includeHeader: function(){
-        this.includeHtml(".header", "../include/header.js", function(){
+        this.includeHtml(".header", "include/header.js", function(){
             gnbEvent.animateGnbMenu();
         });
     },
     includeGnbSubMenu: function(){
-        this.includeHtml(".gnb_submenu", "../include/gnb_submenu.js", function(){
+        this.includeHtml(".gnb_submenu", "include/gnb_submenu.js", function(){
             gnbEvent.animateGnbMenu();
         });
     },
     includeResponsiveGnb: function(){
-        this.includeHtml(".mobile_tablet_gnb", "../include/mobile_tablet_gnb.js", function(){
+        this.includeHtml(".mobile_tablet_gnb", "include/mobile_tablet_gnb.js", function(){
             gnbEvent.animateGnbTabletMobile();
         });
     },
     includeTopButton: function(){
-        this.includeHtml(".top_button", "../include/top_button.js", function(){
+        this.includeHtml(".top_button", "include/top_button.js", function(){
             topButtonEvent.showHideButton();
             topButtonEvent.clickMoveTop('.top_button_box a');
         });
     },
     includeFooter: function(){
-        this.includeHtml(".footer", "../include/footer.js", function(){
+        this.includeHtml(".footer", "include/footer.js", function(){
             animateFooterMenu();
         });
     },
@@ -88,7 +88,6 @@ var topButtonEvent = {
     showHideButton: function(){
                         $('html, body').scroll(function(e) {
                             var checkScorllTop = $('body').scrollTop();
-                            console.log(checkScorllTop);
                             if(checkScorllTop > 200){
                                 $('.top_button').stop().show();
                             }else{
