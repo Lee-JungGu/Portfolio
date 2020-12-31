@@ -1,0 +1,311 @@
+@charset "utf-8";
+/*반응형 PC 퍼스트*/
+/*2. 컨텐츠 영역*/
+#content {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/*2-1. 메인 이벤트 공통 영역*/
+.main_event {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.main_event>a {
+    display: block;
+    width: 1280px;
+}
+.main_event a img {
+    width: 100%;
+}
+.main_event h2 {
+    margin-top: 40px;
+    font-size: 48px;
+    font-weight: 700;
+}
+.main_event p {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.main_event button {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 24px;
+    width: 150px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+}
+.main_event button a {
+    display: block;
+    width: 100%;
+}
+
+/*2-2. 신상품 영역*/
+.new_arrivals {
+    width: 1120px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.new_arrivals h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.new_arrivals .category_box {
+    margin-right: 40px;
+    /*플롯*/
+    float: left;
+}
+.new_arrivals .category_box:last-child {
+    margin-right: 0;
+}
+.new_arrivals .category_box img {
+    width: 250px;
+    margin-bottom: 12px;
+}
+
+/*2-4. 신발 신상품 영역*/
+.new_shoes {
+    width: 1120px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.new_shoes .new_shoes_box {
+    margin-right: 40px;
+    /*플롯*/
+    float: left;
+}
+.new_shoes .new_shoes_box:last-child {
+    margin-right: 0;
+}
+.new_shoes .new_shoes_box img {
+    width: 540px;
+    margin-bottom: 12px;
+}
+
+/*2-7. 베스트 셀러 영역*/
+.best_seller {
+    width: 1120px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+.best_seller>h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.best_seller .horizontal_slider .best_seller_box img {
+    width: 346.6666666666667px;
+    margin-bottom: 12px;
+}
+.best_seller .horizontal_slider .best_seller_box h2 {
+    margin-bottom: 24px;
+}
+.best_seller .horizontal_slider .best_seller_box p {
+    font-size: 20px;
+    font-weight: 500;
+}
+/*슬릭 CSS*/
+.slider .slick-list {
+    margin:0 -40px;
+}
+.slick-slide {
+    margin:0 40px;
+}
+
+
+/*반응형 태블릿 영역*/
+@media all and (min-width:768px) and (max-width:1280px){
+    #content {
+        width: 100%;
+    }
+    /*메인 이벤트 영역*/
+    .main_event>a {
+        width: 94%;
+        margin: 0 auto;
+        height: auto;
+    }
+    
+    /*신상품 영역*/
+    .new_arrivals {
+        width: 94%;
+        margin-bottom: 100px;
+    }
+    .new_arrivals .category_box {
+        width: 23.5%;
+        margin-right: 2%;
+    }
+    .new_arrivals .category_box img {
+        width: 100%;
+    }
+    
+    /*신발 신상품 영역*/
+    .new_shoes {
+        width: 94%;
+        margin-bottom: 100px;
+    }
+    .new_shoes .new_shoes_box {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 40px;
+    }
+    .new_shoes .new_shoes_box:last-child {
+        margin-bottom: 0;
+    }
+    .new_shoes .new_shoes_box img {
+        width: 100%;
+    }
+    .new_shoes .new_shoes_box p {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+    
+    /*베스트 셀러 영역*/
+    .best_seller {
+        width: 94%;
+        margin: 0 auto;
+        margin-bottom: 200px;
+    }
+    .best_seller .horizontal_slider .best_seller_box {
+        width: 100%;
+    }
+    .best_seller .horizontal_slider .best_seller_box img {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    /*슬릭 CSS*/
+    .slider .slick-list {
+        margin:0 -10px;
+    }
+    .slick-slide {
+        margin: 10px;
+    }
+    .slick-dots {
+        bottom: -40px;
+    }
+    
+}
+
+
+/*반응형 모바일 영역*/
+@media screen and (max-width: 768px){
+    #content {
+        width: 100%;
+    }
+    /*메인 이벤트 영역*/
+    .main_event>a {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+    }
+    .main_event>a img {
+        width: 200%;
+    }
+    .main_event_01>a img{
+        width: 180%;
+        margin-left: -63%;
+    }
+    .main_event_02>a img{
+        margin-left: -50%;
+    }
+    .main_event_03>a img{
+        margin-left: -75%;
+    }
+    .main_event_04>a img{
+        width: 170%;
+        margin-left: -52%;
+    }
+    .main_event h2 {
+        font-size: 28px;
+    }
+    .main_event p {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 24px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        word-break: keep-all;
+    }
+    
+    /*신상품 영역*/
+    .new_arrivals {
+        width: 92%;
+        margin-bottom: 100px;
+    }
+    .new_arrivals .category_box {
+        width: 49%;
+        margin-right: 2%;
+    }
+    .new_arrivals .category_box:nth-last-child(3){
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    .new_arrivals .category_box:nth-last-child(1){
+        margin-right: 0;
+    }
+    .new_arrivals .category_box img {
+        width: 100%;
+    }
+    .new_arrivals .category_box p {
+        font-size: 14px;
+    }
+    
+    /*신발 신상품 영역*/
+    .new_shoes {
+        width: 92%;
+        margin-bottom: 100px;
+    }
+    .new_shoes .new_shoes_box {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 40px;
+    }
+    .new_shoes .new_shoes_box:last-child {
+        margin-bottom: 0;
+    }
+    .new_shoes .new_shoes_box img {
+        width: 100%;
+    }
+    .new_shoes .new_shoes_box p {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    
+    /*베스트 셀러 영역*/
+    .best_seller {
+        width: 92%;
+        margin: 0 auto;
+        margin-bottom: 200px;
+    }
+    .best_seller .horizontal_slider .best_seller_box {
+        width: 100%;
+    }
+    .best_seller .horizontal_slider .best_seller_box img {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    /*슬릭 CSS*/
+    .slider .slick-list {
+        margin:0 -10px;
+    }
+    .slick-slide {
+        margin: 10px;
+    }
+    .slick-dots {
+        bottom: -40px;
+    }
+}
+
+
+
+
+
+
+
+
+

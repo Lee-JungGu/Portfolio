@@ -1,0 +1,687 @@
+@charset "utf-8";
+/*반응형 PC 퍼스트*/
+html, body {
+    max-width: 100%;
+    height: 100%;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #0a0a0a;
+    overflow-x: hidden;
+}
+#wrap {
+    width: 100%;
+    height: 100%;
+    /*포지션 위치기준값*/
+    position: relative;
+}
+/*TOP SNB 영역*/
+.top_snb {
+    width: 100%;
+    height: 36px;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #282828;
+    /*GNB메뉴 호버시 GNB세부메뉴 외 영역이 어두워지는데 SNB 영역은 어두워지지 않게 방지*/
+    position: relative;
+    z-index: 999;
+}
+.top_snb .top_snb_box {
+    width: 1280px;
+    margin: 0 auto;
+}
+.top_snb .top_snb_box div {
+    /*플롯*/
+    float: right;
+}
+.top_snb .top_snb_box div a {
+    font-size: 13px;
+    color: #f5f5f5;
+    line-height: 36px;
+}
+.top_snb .top_snb_box span {
+    display: block;
+    width: 1px;
+    height: 11px;
+    background-color: #f5f5f5;
+    margin: 13px 4px;
+    
+    /*플롯*/
+    float: right;
+}
+.top_snb .top_snb_box img {
+    width: 20px;
+    margin-top: 11.5px;
+    margin-left: 24px;
+}
+
+/*1. 헤더 영역*/
+header {
+    width: 100%;
+    background-color: #0a0a0a;
+    /*GNB메뉴 호버시 GNB세부메뉴 외 영역이 어두워지는데 헤더는 어두워지지 않게 방지*/
+    position: relative;
+    z-index: 999;
+}
+.header_box {
+    width: 1280px;
+    height: 64px;
+    margin: 0 auto;
+    color: #f5f5f5;
+    line-height: 64px;
+    /*플렉스*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.header_box .logo img {
+    width: 40px;
+    vertical-align: middle;
+}
+.header_box .gnb li {
+    /*플롯*/
+    float: left;
+    margin-left: 40px;
+}
+.header_box .gnb li:first-child {
+    margin-left: 0;
+}
+.header_box .gnb li a {
+    font-size: 14px;
+}
+.header_box .search_shop_icons {
+    height: 100%;
+}
+.header_box .search_shop_icons a {
+    margin-left: 20px;
+    line-height: 64px;
+}
+.header_box .search_shop_icons a:first-child {
+    margin-left: 0;
+}
+.header_box .search_shop_icons a i {
+    font-size: 18px;
+}
+/*반응형 햄버거 메뉴*/
+.header_box .search_shop_icons .bars {
+    display: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    /*포지션 위치기준값*/
+    position: relative;
+    margin-top: 23px;
+}
+.header_box .search_shop_icons .bars span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #f5f5f5;
+    /*포지션*/
+    position: absolute;
+}
+.header_box .search_shop_icons .bars span:nth-child(1){
+    top: 0;
+}
+.header_box .search_shop_icons .bars span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header_box .search_shop_icons .bars span:nth-child(3){
+    bottom: 0;
+}
+
+/*GNB 세부메뉴 영역*/
+.gnb_submenu {
+    width: 100%;
+    /*포지션 위치기준값*/
+    position: relative;
+}
+.gnb_submenu .gnb_submenu_box {
+    width: 1280px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 9999px;
+    padding: 60px 0;
+    /*로딩시 안보이게 하기*/
+    display: none;
+    /*포지션*/
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gnb_submenu .gnb_submenu_box li {
+    width: 14%;
+    /*플롯*/
+    float: left;
+}
+.gnb_submenu .gnb_submenu_box li:first-child {
+    width: 20%;
+    margin-left: 3.333333333333333%;
+    margin-right: 3.333333333333333%;
+}
+.gnb_submenu .gnb_submenu_box li:last-child {
+    margin-right: 3.333333333333333%;
+}
+.gnb_submenu .gnb_submenu_box li:first-child img {
+    width: 100%;
+}
+.gnb_submenu .gnb_submenu_box li h2 {
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+.gnb_submenu .gnb_submenu_box li:first-child h2 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.gnb_submenu .gnb_submenu_box li p {
+    margin-bottom: 24px;
+    color: #525252;
+    font-size: 13px;
+}
+.gnb_submenu .gnb_submenu_box li p:last-child {
+    margin-bottom: 0;
+}
+/*GNB 신발 영역 세부 조정*/
+.gnb_submenu ul.gnb_shoes li {
+    width: 15%;
+}
+.gnb_submenu ul.gnb_shoes li:first-child {
+    width: 24%;
+    margin-left: 5%;
+    margin-right: 7%;
+}
+/*GNB 아울렛 영역 세부 조정*/
+.gnb_submenu ul.gnb_outlet li {
+    width: 15%;
+}
+.gnb_submenu ul.gnb_outlet li:first-child {
+    width: 24%;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+.gnb_submenu ul.gnb_outlet li:last-child {
+    margin-right: 0;
+}
+
+/*태블릿 모바일용 GNB 세부메뉴*/
+.mobile_tablet_gnb {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-color: #fff;
+    z-index: 999;
+    transition: all 0.5s;
+    /*포지션*/
+    position: fixed;
+    top: 0;
+    left: 100%;
+}
+/*GNB 메뉴 상단*/
+.mobile_tablet_gnb .gnb_header {
+    width: 100%;
+    height: 64px;
+    border-bottom: 1px solid #000;
+}
+.mobile_tablet_gnb .gnb_header .gnb_header_box {
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    /*플렉스*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.mobile_tablet_gnb .gnb_header .gnb_header_box .arrow_left {
+    width: 10px;
+    padding-left: 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+.mobile_tablet_gnb .gnb_header .gnb_header_box .arrow_left img {
+    vertical-align: middle;
+}
+.mobile_tablet_gnb .gnb_header .gnb_header_box .gnb_logo img {
+    width: 34px;
+    vertical-align: middle;
+}
+.mobile_tablet_gnb .gnb_header .gnb_header_box .x_icon img {
+    vertical-align: middle;
+    width: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+}
+/*GNB 내용*/
+mobile_tablet_gnb {
+    width: 100%;
+}
+.mobile_tablet_gnb .gnb_menu li {
+    padding: 24px 16px;
+}
+.mobile_tablet_gnb .gnb_menu li a {
+    width: 100%;
+    /*플렉스*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.mobile_tablet_gnb .gnb_menu li a img {
+    width: 8px;
+}
+.mobile_tablet_gnb .gnb_bottom_menu {
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+}
+.mobile_tablet_gnb .gnb_bottom_menu li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.mobile_tablet_gnb .gnb_bottom_menu li i {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+.mobile_tablet_gnb .gnb_bottom_menu li p {
+    font-size: 10px;
+}
+
+/*탑버튼 영역*/
+.top_button {
+    display: none;
+}
+.top_button .top_button_box {
+    width: 40px;
+    height: 40px;
+    background-color: #c4c4c4;
+    /*포지션 위치 기준값*/
+    position: fixed;
+    right: 4%;
+    bottom: 8%;
+    z-index: 9999;
+    cursor: pointer;
+}
+.top_button .top_button_box a {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.top_button .top_button_box img {
+    width: 16px;
+    /*포지션*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*3. 푸터 영역*/
+.footer {
+    width: 100%;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+    padding-bottom: 60px;
+}
+.footer_box {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.footer_box .logo {
+    margin-bottom: 40px;
+}
+.footer_box nav .footer_gnb li {
+    width: 25%;
+    /*플롯*/
+    float: left;
+}
+.footer_box nav .footer_gnb li:last-child {
+    margin-right: 0;
+}
+.footer_box nav .footer_gnb li>a {
+    display: block;
+    margin-bottom: 20px;
+}
+.footer_box nav .footer_gnb li>a h2 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer_box nav .footer_gnb li>a .arrow_down {
+    display: none;
+}
+.footer_box nav .footer_gnb li>a .arrow_up {
+    display: none;
+}
+.footer_box nav .footer_gnb li .submenu a {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 300;
+}
+/*푸터 이메일 수신 등록 영역*/
+.footer_box nav .footer_gnb li:last-child .email_box {
+    /*포지션 위치기준값*/
+    position: relative;
+    margin-bottom: 12px;
+}
+.footer_box nav .footer_gnb li:last-child .email_box h2 {
+    /*포지션*/
+    position: absolute;
+    left: 8px;
+    top: -6px;
+    font-size: 12px;
+    background-color: #0a0a0a;
+    padding: 0 4px;
+}
+.footer_box nav .footer_gnb li:last-child .email_box input {
+    height: 40px;
+    border-radius: 12px;
+    background-color: inherit;
+    border: 1px solid #f5f5f5;
+    outline: none;
+    color: #f5f5f5;
+}
+.footer_box nav .footer_gnb li:last-child .email_box button {
+    /*포지션*/
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    color: #f5f5f5;
+    font-size: 14px;
+}
+/*푸터 아이콘*/
+.footer_box nav .footer_gnb li:last-child .icons {
+    margin-bottom: 12px;
+}
+.footer_box nav .footer_gnb li:last-child .icons img {
+    width: 48px;
+    margin-right: 12px;
+}
+.footer_box nav .footer_gnb li:last-child .icons a:last-child img {
+    margin-right: 0;
+}
+.footer_box nav .footer_gnb li:last-child p {
+    font-size: 14px;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+/*푸터 중간 가로라인*/
+.footer span {
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: #282828;
+    margin: 40px 0;
+}
+/*푸터 하단 카피라이트 영역*/
+.copyright_box {
+    width: 960px;
+    margin: 0 auto;
+}
+.copyright_box .compony_info,
+.copyright_box .copyright {
+    text-align: center;
+    line-height: 2.2;
+    word-break: keep-all;
+}
+
+
+
+/*반응형 태블릿 영역*/
+@media all and (min-width:768px) and (max-width:1280px){
+    /*TOP SNB 영역*/
+    .top_snb {
+        display: none;
+    }
+    
+    /*1. 헤더 영역*/
+    .header_box {
+        width: 94%;
+
+        /*플렉스 해제*/
+        display: block;
+    }
+    /*로고*/
+    .header_box .logo {
+        /*플롯*/
+        float: left;
+    }
+    .header_box .logo img {
+        width: 34px;
+        vertical-align: middle;
+    }
+    /*gnb 메뉴*/
+    .header_box nav {
+        display: none;
+    }
+    /*검색, 쇼핑 아이콘*/
+    .header_box .search_shop_icons {
+        /*플롯*/
+        float: right;
+    }
+    .header_box .search_shop_icons a {
+        margin-left: 40px;
+    }
+    .header_box .search_shop_icons a i {
+        font-size: 18px;
+    }
+    /*반응형 햄버거 메뉴*/
+    .header_box .search_shop_icons .bars {
+        width: 18px;
+        height: 18px;
+        display: block;
+        margin-left: 40px;
+        /*플롯*/
+        float: right;
+    }
+    
+    /*푸터영역*/
+    .footer_box {
+        width: 94%;
+        padding-top: 60px;
+    }
+    .footer_box nav .footer_gnb li {
+        border-bottom: 1px solid #f5f5f5;
+        width: 100%;
+        /*플롯*/
+        float: left;
+    }
+    .footer_box nav .footer_gnb li:first-child {
+        border-top: 1px solid #f5f5f5;
+    }
+    .footer_box nav .footer_gnb li:last-child {
+        margin-top: 40px;
+        height: auto;
+        line-height: inherit;
+        border: none;
+    }
+    .footer_box nav .footer_gnb li>a {
+        margin-bottom: 0;
+        padding: 20px 0;
+        /*플렉스*/
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .footer_box nav .footer_gnb li>a .arrow_down {
+        display: block;
+    }
+    .footer_box nav .footer_gnb li .submenu {
+        display: none;
+    }
+    .footer_box nav .footer_gnb li .submenu a {
+        margin-bottom: 40px;
+    }
+    .footer_box nav .footer_gnb li .submenu a:first-child {
+        margin-top: 20px;
+    }
+    /*푸터 이메일 수신 등록 영역*/
+    .footer_box nav .footer_gnb li:last-child>a {
+        margin-bottom: 12px;
+    }
+    .footer_box nav .footer_gnb li:last-child .email_box {
+        margin-bottom: 24px;
+    }
+    .footer_box nav .footer_gnb li:last-child .email_box input {
+        height: 48px;
+    }
+    /*푸터 카피라이트 영역*/
+    .copyright_box {
+        width: 94%;
+        margin: 0 auto;
+    }
+    .copyright_box .compony_info {
+        display: none;
+    }
+}
+
+
+
+/*반응형 모바일 영역*/
+@media screen and (max-width: 768px){
+    /*TOP SNB 영역*/
+    .top_snb {
+        display: none;
+    }
+    /*1. 헤더 영역*/
+    .header_box {
+        width: 92%;
+        /*플렉스 해제*/
+        display: block;
+    }
+    /*로고*/
+    .header_box .logo {
+        /*플롯*/
+        float: left;
+    }
+    .header_box .logo img {
+        width: 34px;
+        vertical-align: middle;
+    }
+    /*gnb 메뉴*/
+    .header_box nav {
+        display: none;
+    }
+    /*검색, 쇼핑 아이콘*/
+    .header_box .search_shop_icons {
+        /*플롯*/
+        float: right;
+    }
+    .header_box .search_shop_icons a {
+        margin-left: 40px;
+    }
+    .header_box .search_shop_icons a i {
+        font-size: 18px;
+    }
+    /*반응형 햄버거 메뉴*/
+    .header_box .search_shop_icons .bars {
+        width: 18px;
+        height: 18px;
+        display: block;
+        margin-left: 40px;
+        /*플롯*/
+        float: right;
+    }
+    
+    /*푸터영역*/
+    .footer_box {
+        width: 92%;
+        padding-top: 60px;
+    }
+    .footer_box nav .footer_gnb li {
+        border-bottom: 1px solid #f5f5f5;
+        width: 100%;
+        /*플롯*/
+        float: left;
+    }
+    .footer_box nav .footer_gnb li>a {
+        margin-bottom: 0;
+        padding: 20px 0;
+        /*플렉스*/
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .footer_box nav .footer_gnb li>a .arrow_down {
+        display: block;
+    }
+    .footer_box nav .footer_gnb li:first-child {
+        border-top: 1px solid #f5f5f5;
+    }
+    .footer_box nav .footer_gnb li:last-child {
+        margin-top: 40px;
+        height: auto;
+        line-height: inherit;
+        border: none;
+    }
+    .footer_box nav .footer_gnb li .submenu {
+        display: none;
+    }
+    .footer_box nav .footer_gnb li .submenu a {
+        margin-bottom: 40px;
+    }
+    .footer_box nav .footer_gnb li .submenu a:first-child {
+        margin-top: 20px;
+    }
+    /*푸터 이메일 수신 등록 영역*/
+    .footer_box nav .footer_gnb li:last-child>a {
+        margin-bottom: 12px;
+    }
+    .footer_box nav .footer_gnb li:last-child .email_box {
+        margin-bottom: 24px;
+    }
+    .footer_box nav .footer_gnb li:last-child .email_box input {
+        height: 48px;
+    }
+    .footer_box nav .footer_gnb li .icons {
+        width: 240px;
+        margin: 0 auto;
+    }
+    .footer_box nav .footer_gnb li:last-child p {
+        margin: 0 auto;
+        width: 280px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    /*푸터 카피라이트 영역*/
+    .copyright_box {
+        width: 92%;
+        margin: 0 auto;
+    }
+    .copyright_box .compony_info {
+        display: none;
+    }
+    .copyright_box .copyright p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/*접근성 요소 가려주는 공통 CSS*/
+.blind {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+legend {
+    position: absolute;
+    left: -9999px;
+}
+caption {
+    display: none;
+}
