@@ -9,19 +9,19 @@
     <nav>
         <ul class="gnb cf">
             <li class="gnb_men">
-                <a href="#">MEN</a>
+                <a href="men.html">MEN</a>
             </li>
             <li class="gnb_women">
-                <a href="#">WOMEN</a>
+                <a href="men.html">WOMEN</a>
             </li>
             <li class="gnb_kids">
-                <a href="#">KIDS</a>
+                <a href="men.html">KIDS</a>
             </li>
             <li class="gnb_shoes">
-                <a href="#">SHOES</a>
+                <a href="men.html">SHOES</a>
             </li>
             <li class="gnb_outlet">
-                <a href="#">OUTLET</a>
+                <a href="men.html">OUTLET</a>
             </li>
         </ul>
     </nav>
