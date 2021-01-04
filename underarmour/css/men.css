@@ -1,0 +1,129 @@
+@charset "utf-8";
+/*2. 컨텐츠 영역*/
+#content {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/*2-1. 멘 메뉴 영역*/
+.men_menu {
+    width: 100%;
+    margin-bottom: 100px;
+}
+.men_menu .main_img {
+    width: 60%;
+    /* 플롯 */
+    float: left;
+}
+.men_menu .main_img img {
+    width: 100%;
+}
+.men_menu .menu_box {
+    width: 40%;
+    height: 773px;
+    background-color: #0a0a0a;
+    /* 플롯 */
+    float: right;
+    /* 포지션 위치 기준값 */
+    position: relative;
+    z-index: 1;
+}
+.men_menu .menu_box .text_box {
+    color: #fff;
+    /* 포지션 */
+    position: absolute;
+    top: 13%;
+    left: 25%;
+}
+.men_menu .menu_box .text_box h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 68px;
+}
+.men_menu .menu_box .text_box ul {
+    margin-bottom: 68px;
+}
+.men_menu .menu_box .text_box ul li {
+    
+    margin-bottom: 16px;
+}
+.men_menu .menu_box .text_box button {
+    border-radius: 6px;
+}
+.men_menu .menu_box .text_box button a {
+    display: block;
+    background-color: #fff;
+    font-size: 14px;
+    color: #0a0a0a;
+    padding: 8px 92px;
+    border-radius: 6px;
+}
+
+/*2-2. 베스트 셀러 영역*/
+.best_seller {
+    width: 1120px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+.best_seller>h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.best_seller .horizontal_slider .best_seller_box img {
+    width: 346.6666666666667px;
+    margin-bottom: 12px;
+}
+.best_seller .horizontal_slider .best_seller_box h2 {
+    margin-bottom: 24px;
+}
+.best_seller .horizontal_slider .best_seller_box p {
+    font-size: 20px;
+    font-weight: 500;
+}
+/*슬릭 CSS*/
+.slider .slick-list {
+    margin:0 -40px;
+}
+.slick-slide {
+    margin:0 40px;
+}
+
+/*2-n. 메인 이벤트 공통 영역*/
+.men_event {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.men_event>a {
+    display: block;
+    width: 1280px;
+}
+.men_event a img {
+    width: 100%;
+}
+.men_event h2 {
+    margin-top: 40px;
+    font-size: 48px;
+    font-weight: 700;
+}
+.men_event p {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.men_event button {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 24px;
+    width: 150px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+}
+.men_event button a {
+    display: block;
+    width: 100%;
+}
+.men_event_02 {
+    margin-bottom: 200px;
+}

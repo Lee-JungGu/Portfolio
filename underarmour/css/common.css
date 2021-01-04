@@ -133,6 +133,7 @@ header {
     width: 100%;
     /*포지션 위치기준값*/
     position: relative;
+    z-index: 10;
 }
 .gnb_submenu .gnb_submenu_box {
     width: 1280px;
