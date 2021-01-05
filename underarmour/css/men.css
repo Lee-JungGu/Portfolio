@@ -44,7 +44,6 @@
     margin-bottom: 68px;
 }
 .men_menu .menu_box .text_box ul li {
-    
     margin-bottom: 16px;
 }
 .men_menu .menu_box .text_box button {
@@ -81,6 +80,7 @@
     font-size: 20px;
     font-weight: 500;
 }
+
 /*슬릭 CSS*/
 .slider .slick-list {
     margin:0 -40px;

@@ -439,7 +439,7 @@ mobile_tablet_gnb {
 
 
 /*반응형 태블릿 영역*/
-@media all and (min-width:768px) and (max-width:1280px){
+@media screen and (min-width:768px) and (max-width:1280px){
     /*TOP SNB 영역*/
     .top_snb {
         display: none;
