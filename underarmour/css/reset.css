@@ -11,7 +11,6 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, cite,
 }
 /* body에 폰트 속성,배경 속성, 글자 행간 속성 설정*/
 body {
-/*    font-family: 'Montserrat',sans-serif;*/
     line-height: 1;
 }
 /* 새로운 html5 태그 IE 구버전에서 정상적으로 작동하도록 설정*/
@@ -51,11 +50,8 @@ input, textarea {
     margin: 0;
     padding: 0;
     border: 0;
-/*    border-bottom: 1px solid #757575;*/
     color: #3f51b5;
     width: 100%;
-/*    font-family: 'Montserrat';*/
-/*    font-size: 12px;*/
     vertical-align: top;
     border-radius: 0;   
 }
