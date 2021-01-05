@@ -9,52 +9,49 @@
 .men_menu {
     width: 100%;
     margin-bottom: 100px;
+    /* 포지션 위치 기준값 */
+    position: relative;
 }
 .men_menu .main_img {
-    width: 60%;
-    /* 플롯 */
-    float: left;
+    width: 100%;
 }
 .men_menu .main_img img {
     width: 100%;
 }
 .men_menu .menu_box {
-    width: 40%;
-    height: 773px;
-    background-color: #0a0a0a;
-    /* 플롯 */
-    float: right;
-    /* 포지션 위치 기준값 */
-    position: relative;
-    z-index: 1;
-}
-.men_menu .menu_box .text_box {
-    color: #fff;
+    padding: 0 7%;
+    width: 19.91%;
     /* 포지션 */
     position: absolute;
     top: 13%;
-    left: 25%;
+    right: 0%;
+    color: #fff;
 }
-.men_menu .menu_box .text_box h2 {
+.men_menu .menu_box h2 {
     font-size: 56px;
     font-weight: 700;
     margin-bottom: 80px;
 }
-.men_menu .menu_box .text_box ul {
+.men_menu .menu_box h2 img {
+    display: none;
+}
+.men_menu .menu_box ul {
     margin-bottom: 80px;
 }
-.men_menu .menu_box .text_box ul li {
+.men_menu .menu_box ul li {
     margin-bottom: 20px;
 }
-.men_menu .menu_box .text_box button {
+.men_menu .menu_box button {
+    width: 100%;
     border-radius: 6px;
 }
-.men_menu .menu_box .text_box button a {
+.men_menu .menu_box button a {
+    width: 100%;
     display: block;
     background-color: #fff;
     font-size: 14px;
     color: #0a0a0a;
-    padding: 8px 92px;
+    padding: 8px 0;
     border-radius: 6px;
 }
 
@@ -126,4 +123,184 @@
 }
 .men_event_02 {
     margin-bottom: 200px;
+}
+
+
+/*반응형 태블릿 영역*/
+@media screen and (min-width:768px) and (max-width:1280px){
+    #content {
+        width: 100%;
+    }
+    
+    /* 멘 메뉴 영역 */
+    .men_menu {
+        width: 94%;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+    .men_menu .menu_box {
+        top: 12%;
+    }
+    .men_menu .menu_box h2 {
+        font-size: 40px;
+        margin-bottom: 64px;
+    }
+    .men_menu .menu_box ul {
+        margin-bottom: 64px;
+    }
+    .men_menu .menu_box ul li {
+        font-size: 14px;
+    }
+
+    /*멘 이벤트 영역*/
+    .men_event>a {
+        width: 94%;
+        margin: 0 auto;
+    }
+    
+    /*베스트 셀러 영역*/
+    .best_seller {
+        width: 94%;
+        margin: 0 auto;
+        margin-bottom: 200px;
+    }
+    .best_seller .horizontal_slider .best_seller_box {
+        width: 100%;
+    }
+    .best_seller .horizontal_slider .best_seller_box img {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    /*슬릭 CSS*/
+    .slider .slick-list {
+        margin:0 -10px;
+    }
+    .slick-slide {
+        margin: 10px;
+    }
+    .slick-dots {
+        bottom: -40px;
+    }
+}
+
+
+/*반응형 모바일 영역*/
+@media screen and (max-width: 768px){
+    #content {
+        width: 100%;
+    }
+
+    /* 멘 메뉴 영역 */
+    .men_menu {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+    .men_menu .main_img {
+        width: 152%;
+        padding-top: 80px;
+    }
+    .men_menu .menu_box {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        color: #0a0a0a;
+        text-align: center;
+        top: 26px;
+        top: 0;
+        right: 0;
+    }
+    .men_menu .menu_box h2 {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    .men_menu .menu_box h2 img {
+        width: 10px;
+        display: inline-block;
+        margin-top: 38px;
+    }
+    .men_menu .menu_box ul {
+        width: 100%;
+        margin-bottom: 0;
+        background-color: #fff;
+        display: none;
+    }
+    .men_menu .menu_box ul li {
+        font-size: 14px;
+        margin-bottom: 0;  
+        padding: 26px 0;
+        border-bottom: 1px solid #000; 
+    }
+    .men_menu .menu_box ul li:first-child {
+        border-top: 1px solid #000;
+    }
+    .men_menu .menu_box button {
+        width: 140px;
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+    }
+    .men_menu .menu_box button a {
+        width: 140px;
+    }
+
+    /*멘 이벤트 영역*/
+    .men_event>a {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+    }
+    .men_event>a img {
+        width: 200%;
+    }
+    .men_event_01>a img{
+        width: 180%;
+        margin-left: -40%;
+    }
+    .men_event_02>a img{
+        margin-left: -75%;
+    }
+    .men_event h2 {
+        font-size: 28px;
+    }
+    .men_event p {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 24px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        word-break: keep-all;
+    }
+    
+    /*베스트 셀러 영역*/
+    .best_seller {
+        width: 92%;
+        margin: 0 auto;
+        margin-bottom: 150px;
+    }
+    .best_seller .horizontal_slider .best_seller_box {
+        width: 100%;
+    }
+    .best_seller .horizontal_slider .best_seller_box img {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    /*슬릭 CSS*/
+    .slider .slick-list {
+        margin:0 -10px;
+    }
+    .slick-slide {
+        margin: 10px;
+    }
+    .slick-dots {
+        bottom: -40px;
+    }
 }
