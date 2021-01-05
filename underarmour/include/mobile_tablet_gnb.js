@@ -16,31 +16,31 @@
 <!--gnb 세부메뉴 내용-->
 <ul class="gnb_menu">
     <li>
-        <a href="../men.html">
+        <a href="men.html">
             <h2>Men</h2>
             <img src="images/icon/arrow_right.png" alt="오른쪽 화살표">
         </a>
     </li>
     <li>
-        <a href="../men.html">
+        <a href="men.html">
             <h2>Women</h2>
             <img src="images/icon/arrow_right.png" alt="오른쪽 화살표">
         </a>
     </li>
     <li>
-        <a href="../men.html">
+        <a href="men.html">
             <h2>Kids</h2>
             <img src="images/icon/arrow_right.png" alt="오른쪽 화살표">
         </a>
     </li>
     <li>
-        <a href="../men.html">
+        <a href="men.html">
             <h2>Shoes</h2>
             <img src="images/icon/arrow_right.png" alt="오른쪽 화살표">
         </a>
     </li>
     <li>
-        <a href="../men.html">
+        <a href="men.html">
             <h2>Outlet</h2>
             <img src="images/icon/arrow_right.png" alt="오른쪽 화살표">
         </a>
