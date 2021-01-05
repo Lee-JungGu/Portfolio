@@ -229,6 +229,9 @@
         margin-bottom: 0;
         background-color: #fff;
         display: none;
+        /* z-index값 주기 위한 포지션 */
+        position: relative;
+        z-index: 99;
     }
     .men_menu .menu_box ul li {
         font-size: 14px;
@@ -241,6 +244,7 @@
     }
     .men_menu .menu_box button {
         width: 140px;
+        /* 포지션 */
         position: absolute;
         left: 50%;
         bottom: 40px;
