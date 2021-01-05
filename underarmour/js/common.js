@@ -105,18 +105,21 @@ var topButtonEvent = {
 
 function animateFooterMenu(){
     $('.footer_gnb li a').click(function(){
+        var mediaQueryList = matchMedia("screen and (max-width: 1280px)");
         var checkDisplay = $(this).next('.submenu').css('display');
-        if(checkDisplay == 'none'){
-            $('.arrow_down').stop().show();
-            $('.arrow_up').stop().hide();
-            $('.footer_gnb .submenu').stop().slideUp();
-            $(this).children('.arrow_down').stop().hide();
-            $(this).children('.arrow_up').stop().show();
-            $(this).next('.submenu').stop().slideDown();
-        }else if(checkDisplay == 'block'){
-            $(this).children('.arrow_down').stop().show();
-            $(this).children('.arrow_up').stop().hide();
-            $(this).next('.submenu').stop().slideUp();
+        if(mediaQueryList.matches){
+            if(checkDisplay == 'none'){
+                $('.arrow_down').stop().show();
+                $('.arrow_up').stop().hide();
+                $('.footer_gnb .submenu').stop().slideUp();
+                $(this).children('.arrow_down').stop().hide();
+                $(this).children('.arrow_up').stop().show();
+                $(this).next('.submenu').stop().slideDown();
+            }else if(checkDisplay == 'block'){
+                $(this).children('.arrow_down').stop().show();
+                $(this).children('.arrow_up').stop().hide();
+                $(this).next('.submenu').stop().slideUp();
+            }
         }
     });
 }
