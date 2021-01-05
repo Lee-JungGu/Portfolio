@@ -1,8 +1,4 @@
 @charset 'utf-8';
-/* 웹폰트 CSS*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat|PT+Serif');
-/* CSS불러오기*/
-@import url('font.css');
 /* CSS 초기화*/
 html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, cite, code, del, em, img, ins, q, small, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, section, summary, time, mark, audio, video, button {
     margin: 0;
