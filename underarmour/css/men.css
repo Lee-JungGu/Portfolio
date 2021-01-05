@@ -38,13 +38,13 @@
 .men_menu .menu_box .text_box h2 {
     font-size: 56px;
     font-weight: 700;
-    margin-bottom: 68px;
+    margin-bottom: 80px;
 }
 .men_menu .menu_box .text_box ul {
-    margin-bottom: 68px;
+    margin-bottom: 80px;
 }
 .men_menu .menu_box .text_box ul li {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 .men_menu .menu_box .text_box button {
     border-radius: 6px;
