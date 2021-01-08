@@ -255,7 +255,7 @@ header {
     cursor: pointer;
 }
 /*GNB 내용*/
-mobile_tablet_gnb {
+.mobile_tablet_gnb {
     width: 100%;
 }
 .mobile_tablet_gnb .gnb_menu li {
