@@ -177,7 +177,7 @@
 
 
 /*반응형 모바일 영역*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     /* 멘 메뉴 영역 */
     .men_menu {
         width: 100%;

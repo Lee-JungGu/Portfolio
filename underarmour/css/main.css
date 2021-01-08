@@ -182,7 +182,7 @@
 
 
 /*반응형 모바일 영역*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     /*메인 이벤트 영역*/
     .main_event>a {
         width: 100%;
