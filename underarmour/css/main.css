@@ -1,11 +1,5 @@
 @charset "utf-8";
 /*반응형 PC 퍼스트*/
-/*2. 컨텐츠 영역*/
-#content {
-    width: 1280px;
-    margin: 0 auto;
-}
-
 /*2-1. 메인 이벤트 공통 영역*/
 .main_event {
     text-align: center;
@@ -119,9 +113,6 @@
 
 /*반응형 태블릿 영역*/
 @media screen and (min-width:768px) and (max-width:1280px){
-    #content {
-        width: 100%;
-    }
     /*메인 이벤트 영역*/
     .main_event>a {
         width: 94%;
@@ -192,9 +183,6 @@
 
 /*반응형 모바일 영역*/
 @media screen and (max-width: 768px){
-    #content {
-        width: 100%;
-    }
     /*메인 이벤트 영역*/
     .main_event>a {
         width: 100%;
