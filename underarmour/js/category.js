@@ -19,6 +19,12 @@ var sortMenuEvents = {
 }
 
 var filterEvents = {
+    focusMenuTitle: function (){
+        $('.category_filter .filter_menu a').on("click", function(){
+            $('.category_filter .filter_menu a').css("font-weight", "400");
+            $(this).css("font-weight", "600");
+        });
+    },
     addColorFilter: function (){
         $('.color_circles .circle').on("click", function(){
             var checkClass = $(this).attr('class');
@@ -52,6 +58,8 @@ var filterEvents = {
             $('.filter_filter .content_box').html("");
             $('.price_checkboxes input').prop('checked', false);
             $('.type_checkboxes input').prop('checked', false);
+            $('.category_filter .filter_menu a').css("font-weight", "400");
+            $('.category_filter .filter_menu ul li').eq(0).children('a').css("font-weight", "600");
         });
     },
     animateFilterContent: function (){
@@ -71,6 +79,7 @@ var filterEvents = {
 sortMenuEvents.animateSortMenu();
 sortMenuEvents.changeMenuTitle();
 
+filterEvents.focusMenuTitle();
 filterEvents.addColorFilter();
 filterEvents.addSizeFilter();
 filterEvents.removeFilter();
