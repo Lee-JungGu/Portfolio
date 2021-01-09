@@ -12,7 +12,6 @@
     font-size: 14px;
 }
 .category_title h3 {
-    display: inline-block;
     font-size: 24px;
     font-weight: 700;
     /* 플롯 */
@@ -23,15 +22,15 @@
     /* 플롯 */
     float: right;
 }
+.category_title .filter span {
+    display: inline-block;
+    margin-right: 16px;
+}
 .category_title .filter .sort_menu {
     display: inline-block;
     width: 86px;
     /* 포지션 위치 기준값 */
     position: relative;
-}
-.category_title .filter span {
-    display: inline-block;
-    margin-right: 16px;
 }
 .category_title .filter .sort_menu a p {
     /* 플롯 */
@@ -55,6 +54,19 @@
 .category_title .filter .sort_menu .submenu li {
     margin-top: 12px;
 }
+.category_title .filter .filter_btn {
+    display: none;
+    /* 플롯 */
+    float: right;
+}
+.category_title .filter .filter_btn a {
+    display: block;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #000;
+}
 
 /* 2-2. 카테고리 필터 영역 */
 .category_filter {
@@ -63,6 +75,28 @@
     font-size: 14px;
     /* 플롯 */
     float: left;
+}
+
+/* 2-2-0. 반응형 정렬 메뉴 영역 */
+.category_filter .responsive_sort_menu {
+    margin-bottom: 40px;
+    display: none;
+}
+.category_filter .responsive_sort_menu h2 {
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+.category_filter .responsive_sort_menu ul {
+    margin-left: 12px;
+}
+.category_filter .responsive_sort_menu ul li {
+    margin-bottom: 12px;
+}
+.category_filter .responsive_sort_menu ul li:first-child {
+    font-weight: 500;
+}
+.category_filter .responsive_sort_menu ul li:last-child {
+    margin-bottom: 0;
 }
 
 /* 2-2-1. 필터 메뉴 영역 */
