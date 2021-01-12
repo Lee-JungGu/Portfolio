@@ -33,12 +33,12 @@ var includeHtmls = {
         });
     },
     drawInclusionHtml: function(){
-        includeHtmls.includeTopSnb();
-        includeHtmls.includeHeader();
-        includeHtmls.includeGnbSubMenu();
-        includeHtmls.includeResponsiveGnb();
-        includeHtmls.includeTopButton();
-        includeHtmls.includeFooter();
+        this.includeTopSnb();
+        this.includeHeader();
+        this.includeGnbSubMenu();
+        this.includeResponsiveGnb();
+        this.includeTopButton();
+        this.includeFooter();
     }
 
 }
