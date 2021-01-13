@@ -336,15 +336,70 @@
         margin: auto;
         margin-top: 40px;
     }
+    .category_title .filter span {
+        display: none;
+    }
+    .category_title .filter .sort_menu {
+        display: none;
+    }
+    .category_title .filter .filter_btn {
+        display: block;
+    }
 
     /* 2-2. 카테고리 필터 영역 */
     .category_filter {
-        width: 290px;
-        margin-top: 48px;
-        font-size: 14px;
+        overflow: scroll;
+        width: 40%;
+        height: 100%;
+        margin-top: 0;
+        background-color: #fff;
         /* 플롯 */
         float: none;
+        /* 포지션 */
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 9999;
+        transition: left 0.5s;
     }
+    .background_shadow {
+        overflow: hidden;
+        overflow-y: scroll;
+        width: 100%;
+        height: 200%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* 포지션 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+    .category_filter .category_filter_box {
+        padding: 40px 24px;
+    }
+
+    /* 2-2-0. 반응형 정렬 메뉴 영역 */
+    .category_filter .responsive_sort_menu {
+        margin-bottom: 40px;
+        display: block;
+    }
+    .category_filter .responsive_sort_menu h2 {
+        margin-bottom: 24px;
+        font-weight: 600;
+    }
+    .category_filter .responsive_sort_menu ul {
+        margin-left: 12px;
+    }
+    .category_filter .responsive_sort_menu ul li {
+        margin-bottom: 12px;
+    }
+    .category_filter .responsive_sort_menu ul li:first-child {
+        font-weight: 500;
+    }
+    .category_filter .responsive_sort_menu ul li:last-child {
+        margin-bottom: 0;
+    }
+
     /* 2-2-1. 필터 메뉴 영역 */
     .category_filter .filter_menu h2 {
         margin-bottom: 24px;

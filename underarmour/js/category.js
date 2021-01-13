@@ -17,8 +17,27 @@ var sortMenuEvents = {
         });
     }
 }
-
 var filterEvents = {
+    animateResponsiveGnb: function (){
+        $('.filter_btn').on("click", function(){
+            var checkLeft = $('.category_filter').css('left').replace('px', "");
+            if(checkLeft < 0){
+                $('.category_filter').css('left', '0');
+                $('#wrap').append(
+                    '<div class="background_shadow"></div>'
+                );
+            }
+        });
+        $('#wrap').on("click", function(e){
+            if(!$('.category_filter').has(e.target).length){
+                var checkLeft = $('.category_filter').css('left').replace('px', "");
+                if(checkLeft == 0){
+                    $('.category_filter').css('left', '-100%');
+                    $('.background_shadow').remove();
+                }
+            }
+        });
+    },
     focusMenuTitle: function (){
         $('.category_filter .filter_menu a').on("click", function(){
             $('.category_filter .filter_menu a').css("font-weight", "400");
@@ -27,8 +46,7 @@ var filterEvents = {
     },
     addColorFilter: function (){
         $('.color_circles .circle').on("click", function(){
-            var checkClass = $(this).attr('class');
-                checkColor = checkClass.replace('circle ', '');
+            var checkColor = $(this).attr('class').replace('circle ', '');
                 checkOverlap = $('.filter_filter .content_box p').text().indexOf(checkColor);
             if(checkOverlap < 0){
             $('.filter_filter .content_box').append(
@@ -79,6 +97,7 @@ var filterEvents = {
 sortMenuEvents.animateSortMenu();
 sortMenuEvents.changeMenuTitle();
 
+filterEvents.animateResponsiveGnb();
 filterEvents.focusMenuTitle();
 filterEvents.addColorFilter();
 filterEvents.addSizeFilter();
