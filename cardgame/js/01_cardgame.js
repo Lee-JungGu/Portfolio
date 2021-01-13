@@ -127,42 +127,32 @@ function animateCurtainCall(){
     },800);
 }
 
+
 function init(){
     drawCards();
     animateCurtainCall();
 }
 
-// 이미지 드래그 방지
-$('img').on('dragstart',function(event){
-    event.preventDefault();
-});
+function playGame(){
+    $('.backOfCards img').click(function(){
+        matchCards(this);
+        succeseGame();
+    });
+}
+
+function restartGame(){
+    $('.restart_btn').click(function(){
+        location.reload();
+    });
+}
+
+function preventImgDrag(){
+    $('img').on('dragstart',function(event){
+        event.preventDefault();
+    });
+}
 
 init();
-
-$('.backOfCards img').click(function(){
-    matchCards(this);
-    succeseGame();
-});
-
-// 리스타트
-$('.restart_btn').click(function(){
-    location.reload();
-});
-
-// 매직넘버 주의  상수 검색
-// 메소드 네이밍 룰 검색
-// 메소드 이름 고민
-// 메소드화 시켜서 활용할때 메소드화 시킬꺼면 같이 아니면 나눠서
-// imgname[] 전역변수 사용 할때 잘 생각해서
-// 클래스를 이용해서 좀 더 단순하게
-// 호이스팅 검색  스코프 호이스팅 클로저
-// 빅오표기법
-
-//네이밍 룰에 대하여 좀 더 공부
-//컨벤션 검색
-//랜덤함수 직접 구현해보기
-//주석 적을때 왜 주석을 다는지 적절한 이유를 적을 것
-//객체에 구조를 미리 만들어 놓아서 한눈에 볼 수 있게 하기
-//메소드명 앞에는 동사가 먼저 와야함 문법을 꼭 잘 지킬필요는 없고 의미 전달만 잘 되면 됨
-//카드 앞뒤 정보를 모두 넣다보니 정보가 너무 많아서 줄일 수 있는 방법을 찾아보기
-//오류를 막는 부분은 맨 처음에 막고 시작할 것.
+playGame();
+restartGame();
+preventImgDrag();
