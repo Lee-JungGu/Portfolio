@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>카드 맞추기 게임</title>
+    <link rel="stylesheet" href="css/01_cardgame.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="curtain">
+            <i>Card Game!!!</i>
+            <img src="images/curtain_left.jpg" alt="커튼콜이미지">
+            <img src="images/curtain_right.jpg" alt="커튼콜이미지">
+        </div>
+        <div id="content">
+            <div id="cardgame">
+                <!--카드앞면 8장-->
+                <div class="frnotOfCards">
+                    <img alt='카드앞면이미지1'>
+                    <img alt='카드앞면이미지2'>
+                    <img alt='카드앞면이미지3'>
+                    <img alt='카드앞면이미지4'>
+                    <img alt='카드앞면이미지5'>
+                    <img alt='카드앞면이미지6'>
+                    <img alt='카드앞면이미지7'>
+                    <img alt='카드앞면이미지8'>
+                </div>
+                <!--카드뒷면 8장-->
+                <div class="backOfCards">
+                    <img src="images/img5.png" alt="카드뒷면이미지1">
+                    <img src="images/img5.png" alt="카드뒷면이미지2">
+                    <img src="images/img5.png" alt="카드뒷면이미지3">
+                    <img src="images/img5.png" alt="카드뒷면이미지4">
+                    <img src="images/img5.png" alt="카드뒷면이미지5">
+                    <img src="images/img5.png" alt="카드뒷면이미지6">
+                    <img src="images/img5.png" alt="카드뒷면이미지7">
+                    <img src="images/img5.png" alt="카드뒷면이미지8">
+                </div>
+            </div>
+        </div>
+        <button class="restart_btn">RESTART</button>
+        <div class="succese">
+            <i>SUCCESE!!!</i>
+            <img src="images/firecracker_01.png" alt="폭죽이미지">
+            <img src="images/firecracker_02.png" alt="폭죽이미지">
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/01_cardgame.js"></script>
