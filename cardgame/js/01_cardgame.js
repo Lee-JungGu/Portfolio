@@ -1,4 +1,4 @@
-var frontOfCardImgs = $('.frnotOfCards img');
+var frontOfCardImgs = $('.frontOfCards img');
 var backOfCardImgs = $('.backOfCards img');
 var cardData = {
     firstCard: {
