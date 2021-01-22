@@ -54,7 +54,7 @@ var filterEvents = {
                 checkOverlap = $('.filter_filter .content_box p').text().indexOf(checkColor);
             if(checkOverlap < 0){
             $('.filter_filter .content_box').append(
-                '<p class="hide_button">' + checkColor + ' X</p>'
+                '<button class="hide_button">' + checkColor + ' X</button>'
                 );
             }
         });
@@ -65,7 +65,7 @@ var filterEvents = {
                 checkOverlap = $('.filter_filter .content_box p').text().indexOf(checkText);
             if(checkOverlap < 0){
             $('.filter_filter .content_box').append(
-                '<p class="hide_button">' + checkText + ' X</p>'
+                '<button class="hide_button">' + checkText + ' X</button>'
                 );
             }
         });
