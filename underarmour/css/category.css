@@ -157,7 +157,6 @@
     background-color: #000;
 }
 .category_filter .filter_filter .content_box .hide_button {
-    box-sizing: content-box;
     display: inline-block;
     width: fit-content;
     font-size: 12px;
