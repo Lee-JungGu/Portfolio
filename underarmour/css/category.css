@@ -164,6 +164,7 @@
     margin-top: 12px;
     margin-right: 8px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 /* 2-2-3. 필터 컬러 영역 */
