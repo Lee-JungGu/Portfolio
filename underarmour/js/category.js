@@ -38,11 +38,15 @@ var filterEvents = {
             }
         });
     },
-    focusMenuTitle: function (){
-        $('.category_filter .filter_menu a').on("click", function(){
-            $('.category_filter .filter_menu a').css("font-weight", "400");
+    focusMenuTitle: function (selector){
+        $(selector).on("click", function(){
+            $(selector).css("font-weight", "400");
             $(this).css("font-weight", "600");
         });
+    },
+    focusMenuTitles: function (){
+        this.focusMenuTitle('.category_filter .filter_menu a');
+        this.focusMenuTitle('.category_filter .responsive_sort_menu a');
     },
     addColorFilter: function (){
         $('.color_circles .circle').on("click", function(){
@@ -98,7 +102,7 @@ sortMenuEvents.animateSortMenu();
 sortMenuEvents.changeMenuTitle();
 
 filterEvents.animateResponsiveGnb();
-filterEvents.focusMenuTitle();
+filterEvents.focusMenuTitles();
 filterEvents.addColorFilter();
 filterEvents.addSizeFilter();
 filterEvents.removeFilter();
