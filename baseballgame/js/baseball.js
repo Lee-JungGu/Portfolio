@@ -50,5 +50,6 @@ function sucessGame(){
         alert('게임 성공!!!!!')
     }
 }
+
 randomStrikeNumber();
 drawInputBox();
