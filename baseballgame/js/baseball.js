@@ -7,7 +7,6 @@ function randomStrikeNumber(){
         strikeNumber[i] = rangeNumber[randomNum]
         rangeNumber.splice(randomNum, 1) ;
     }
-    console.log(strikeNumber);
 }
 
 function drawInputBox(){
@@ -19,7 +18,7 @@ function drawInputBox(){
     + '<p id="result3"></p>';
 }
 
-function compareNumber(){
+function judgeNumber(){
     let findInput = document.getElementById('textbox').value;
     let firstNumber = Math.floor(findInput / 100);
     let secondNumber = Math.floor((findInput % 100) / 10);
@@ -28,50 +27,40 @@ function compareNumber(){
     let ball = 0;
     let out = 0;
 
-    if(firstNumber == strikeNumber[0]){
-        strike++;
-    }else if(firstNumber == strikeNumber[1]){
-        ball++;
-    }else if(firstNumber == strikeNumber[2]){
-        ball++;
-    }else{
-        out++;
+    function compareNumber(numericOrder, indexNum1, indexNum2, indexNum3){
+        if(numericOrder == strikeNumber[indexNum1]){
+            strike++;
+        }else if(numericOrder == strikeNumber[indexNum2]){
+            ball++;
+        }else if(numericOrder == strikeNumber[indexNum3]){
+            ball++;
+        }else{
+            out++;
+        }
     }
 
-    if(secondNumber == strikeNumber[1]){
-        strike++;
-    }else if(secondNumber == strikeNumber[0]){
-        ball++;
-    }else if(secondNumber == strikeNumber[2]){
-        ball++;
-    }else{
-        out++;
-    }
-
-    if(thirdNumber == strikeNumber[2]){
-        strike++;
-    }else if(thirdNumber == strikeNumber[0]){
-        ball++;
-    }else if(thirdNumber == strikeNumber[1]){
-        ball++;
-    }else{
-        out++;
+    function drawNumber(){
+        document.getElementById('result1').innerHTML = strike + ' Strike';
+        document.getElementById('result2').innerHTML = ball + ' Ball';
+        document.getElementById('result3').innerHTML = out + ' Out';
     }
     
-    document.getElementById('result1').innerHTML = strike + ' Strike';
-    document.getElementById('result2').innerHTML = ball + ' Ball';
-    document.getElementById('result3').innerHTML = out + ' Out';
+    compareNumber(firstNumber, 0, 1, 2);
+    compareNumber(secondNumber, 1, 0, 2);
+    compareNumber(thirdNumber, 2, 0, 1);
 
+    drawNumber();
+    
     return strike;
 }
 
 function drawJudgment(){
-    compareNumber();
+    judgeNumber();
     sucessGame();
 }
 
 function sucessGame(){
-    var strike = compareNumber();
+    var strike = judgeNumber();
     if(strike == 3){
         alert('게임 성공!!!!!')
     }
