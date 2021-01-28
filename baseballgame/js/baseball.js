@@ -19,26 +19,52 @@ function drawInputBox(){
     + '<p id="result3"></p>';
 }
 
-function compareNumber(numericOrder, resultNum, indexNum1, indexNum2, indexNum3){
-    if(numericOrder == strikeNumber[indexNum1]){
-        document.getElementById(resultNum).innerHTML = 'Strike';
-    }else if(numericOrder == strikeNumber[indexNum2]){
-        document.getElementById(resultNum).innerHTML = 'Ball';
-    }else if(numericOrder == strikeNumber[indexNum3]){
-        document.getElementById(resultNum).innerHTML = 'Ball';
-    }else{
-        document.getElementById(resultNum).innerHTML = 'Out';
-    }
-}
-
-function drawJudgment(){
+function compareNumber(){
     let findInput = document.getElementById('textbox').value;
     let firstNumber = Math.floor(findInput / 100);
     let secondNumber = Math.floor((findInput % 100) / 10);
     let thirdNumber = (findInput % 100) % 10;
-    compareNumber(firstNumber, 'result1', 0, 1, 2);
-    compareNumber(secondNumber, 'result2', 1, 0, 2);
-    compareNumber(thirdNumber, 'result3', 2, 0, 1);
+    let strike = 0;
+    let ball = 0;
+    let out = 0;
+
+    if(firstNumber == strikeNumber[0]){
+        strike++;
+    }else if(firstNumber == strikeNumber[1]){
+        ball++;
+    }else if(firstNumber == strikeNumber[2]){
+        ball++;
+    }else{
+        out++;
+    }
+
+    if(secondNumber == strikeNumber[1]){
+        strike++;
+    }else if(secondNumber == strikeNumber[0]){
+        ball++;
+    }else if(secondNumber == strikeNumber[2]){
+        ball++;
+    }else{
+        out++;
+    }
+
+    if(thirdNumber == strikeNumber[2]){
+        strike++;
+    }else if(thirdNumber == strikeNumber[0]){
+        ball++;
+    }else if(thirdNumber == strikeNumber[1]){
+        ball++;
+    }else{
+        out++;
+    }
+    
+    document.getElementById('result1').innerHTML = strike + ' Strike';
+    document.getElementById('result2').innerHTML = ball + ' Ball';
+    document.getElementById('result3').innerHTML = out + ' Out';
+}
+
+function drawJudgment(){
+    compareNumber();
     sucessGame();
 }
 
