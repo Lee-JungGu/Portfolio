@@ -60,7 +60,7 @@ function drawJudgment(){
 }
 
 function sucessGame(){
-    var strike = judgeNumber();
+    let strike = judgeNumber();
     if(strike == 3){
         alert('게임 성공!!!!!')
     }
