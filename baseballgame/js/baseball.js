@@ -61,6 +61,8 @@ function compareNumber(){
     document.getElementById('result1').innerHTML = strike + ' Strike';
     document.getElementById('result2').innerHTML = ball + ' Ball';
     document.getElementById('result3').innerHTML = out + ' Out';
+
+    return strike;
 }
 
 function drawJudgment(){
@@ -69,10 +71,8 @@ function drawJudgment(){
 }
 
 function sucessGame(){
-    let checkJudgment1 = document.getElementById('result1');
-    let checkJudgment2 = document.getElementById('result2');
-    let checkJudgment3 = document.getElementById('result3');
-    if(checkJudgment1.innerHTML == 'Strike' && checkJudgment2.innerHTML == 'Strike' && checkJudgment3.innerHTML == 'Strike'){
+    var strike = compareNumber();
+    if(strike == 3){
         alert('게임 성공!!!!!')
     }
 }

@@ -1,0 +1,18 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 150px;
+}
+#content input {
+    width: 100px;
+    height: 24px;
+    margin-right: 4px;
+    margin-bottom: 20px;
+}
