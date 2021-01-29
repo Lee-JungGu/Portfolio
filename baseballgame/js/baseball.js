@@ -11,7 +11,7 @@ function randomStrikeNumber(){
 
 function drawInputBox(){
     document.getElementById('content').innerHTML =
-    '<input id="textbox" type="textbox" onchange="judgement.drawJudgement()">'
+    '<input id="textbox" type="textbox" maxlength="3" onchange="judgement.drawJudgement()">'
     + '<button>확인</button>'
     + '<div id="display"></div>'
     + '<div id="judgeBox"><p id="strike"></p>'
@@ -42,7 +42,9 @@ function clickKeypad(){
             }else if(this == delNumber){
                 document.getElementById('textbox').value = "";
             }
-            document.getElementById('textbox').value += this.dataset.num;
+            if(document.getElementById('textbox').value.length < 3){
+                document.getElementById('textbox').value += this.dataset.num;
+            }
         });
     });
 }
