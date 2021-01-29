@@ -15,34 +15,51 @@ function drawInputBox(){
     + '<div id="display"></div>'
     + '<div id="judgeBox"><p id="strike"></p>'
     + '<p id="ball"></p>'
-    + '<p id="out"></p></div>'
-    + '<div id="keypad"><button data-num="1">1</button>'
-    + '<button data-num="2">2</button>'
-    + '<button data-num="3">3</button>'
-    + '<button data-num="4">4</button>'
-    + '<button data-num="5">5</button>'
-    + '<button data-num="6">6</button>'
-    + '<button data-num="7">7</button>'
-    + '<button data-num="8">8</button>'
-    + '<button data-num="9">9</button>'
-    + '<button id="del" data-num="">Del</button>'
-    + '<button data-num="0">0</button>'
-    + '<button id="throw" data-num="">Throw</button></div>';
+    + '<p id="out"></p>'
+    + '<p id="record"></p></div>'
+    + '<div id="keypad"><div><button data-num="1">1</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button data-num="2">2</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button data-num="3">3</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button data-num="4">4</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button data-num="5">5</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button data-num="6">6</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button data-num="7">7</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button data-num="8">8</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button data-num="9">9</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button id="del" data-num="">Del</button></div>'
+    + '<div><button data-num="0">0</button><img src="images/baseball.png" alt="야구공이미지"></div>'
+    + '<div><button id="throw" data-num="">Throw</button></div>'
+    + '</div>';
 }
 
 function clickKeypad(){
-    let keyButtons = document.querySelectorAll('#keypad button');
+    let keyButtons = document.querySelectorAll('#keypad div button');
     keyButtons.forEach(function(keyButton){
         keyButton.addEventListener('click', function(){
             let throwBall = document.getElementById('throw');
             let delNumber = document.getElementById('del');
+            let checkData = this.dataset.num;
             if(this == throwBall){
                 judgement.drawJudgement();
+                document.querySelectorAll('.flip_ball').forEach(function(flipBall){
+                    flipBall.setAttribute('class', '');
+                });
+                document.getElementById('record').innerHTML += document.getElementById('textbox').value + '<br>';
+                document.getElementById('textbox').value = '';
             }else if(this == delNumber){
                 document.getElementById('textbox').value = "";
+                document.querySelectorAll('.flip_ball').forEach(function(flipBall){
+                    flipBall.setAttribute('class', '');
+                });
             }
             if(document.getElementById('textbox').value.length < 3){
                 document.getElementById('textbox').value += this.dataset.num;
+            }
+            if(!checkData == ""){
+                if(document.getElementsByClassName('flip_ball').length < 6){
+                    this.setAttribute('class', 'flip_ball');
+                    this.nextSibling.setAttribute('class', 'flip_ball');
+                }
             }
         });
     });
@@ -75,6 +92,7 @@ let judgement = {
     sucessGame: function(){
         if(judgement.strike == 3){
             alert('게임 성공!!!!!')
+            document.getElementById('record').innerHTML = '';
         }
     },
     
