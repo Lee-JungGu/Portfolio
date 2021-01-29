@@ -9,10 +9,29 @@
     margin: 0 auto;
     margin-top: 40px;
     width: 150px;
+    /* 포지션 위치 기준값 */
+    position: relative;
 }
 #content input {
     width: 100px;
     height: 24px;
     margin-right: 4px;
     margin-bottom: 20px;
+}
+#content #judgeBox {
+    width: 100%;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    left: 110%;
+}
+#content #keypad {
+    width: 100%;
+}
+#content #keypad button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 6px 5px;
+    outline: none;
 }
