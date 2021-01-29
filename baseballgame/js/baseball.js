@@ -7,12 +7,12 @@ function randomStrikeNumber(){
         strikeNumber[i] = rangeNumber[randomNum];
         rangeNumber.splice(randomNum, 1);
     }
+    console.log(strikeNumber);
 }
 
 function drawInputBox(){
     document.getElementById('content').innerHTML =
     '<input id="textbox" type="textbox" maxlength="3" onchange="judgement.drawJudgement()">'
-    + '<div id="display"></div>'
     + '<div id="judgeBox"><p id="strike"></p>'
     + '<p id="ball"></p>'
     + '<p id="out"></p>'
@@ -89,9 +89,39 @@ let judgement = {
         document.getElementById('out').innerHTML = this.out + ' Out';
     },
     
+    playAnimation: function(){
+        if(this.out == 3){
+            document.getElementById('threeOut').style.display = 'block';
+            document.getElementById('threeOut').play();
+            document.getElementById('threeOut').addEventListener('ended', function(){
+                document.getElementById('threeOut').style.display = 'none';
+            });
+        }else if(this.out == 2){
+            document.getElementById('twoOut').style.display = 'block';
+            document.getElementById('twoOut').play();
+            document.getElementById('twoOut').addEventListener('ended', function(){
+                document.getElementById('twoOut').style.display = 'none';
+            });
+        }else if(this.out == 1){
+            document.getElementById('oneOut').style.display = 'block';
+            document.getElementById('oneOut').play();
+            document.getElementById('oneOut').addEventListener('ended', function(){
+                document.getElementById('oneOut').style.display = 'none';
+            });
+        }else if(this.out == 0 && this.ball != 0){
+            document.getElementById('oneOut').style.display = 'block';
+            document.getElementById('oneOut').play();
+            document.getElementById('oneOut').addEventListener('ended', function(){
+                document.getElementById('oneOut').style.display = 'none';
+            });
+        }
+    },
+
     sucessGame: function(){
         if(judgement.strike == 3){
-            alert('게임 성공!!!!!')
+            // alert('게임 성공!!!!!')
+            document.getElementById('succes').style.display = 'block';
+            document.getElementById('succes').play();
             document.getElementById('record').innerHTML = '';
         }
     },
@@ -106,6 +136,7 @@ let judgement = {
         this.compareNumber(secondNumber, 1, 0, 2);
         this.compareNumber(thirdNumber, 2, 0, 1);
         this.drawNumber();
+        this.playAnimation();
         this.sucessGame();
         
         this.strike = 0;

@@ -71,6 +71,13 @@
     backface-visibility: hidden;
     transition: 0.5s;
 }
+
+video {
+    display: none;
+    width: 300px;
+    margin: 0 auto;
+}
+
 .flip_ball {
     transform: rotateY(180deg);
 }
