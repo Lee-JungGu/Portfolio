@@ -100,7 +100,7 @@ let judgement = {
 
     sucessGame: function(){
         if(judgement.strike == 3){
-            document.querySelector('#animation img').style.display = 'none';
+            document.querySelector('#baseball_display img').style.display = 'none';
             document.getElementById('succes').style.display = 'block';
             document.getElementById('succes').play();
             document.getElementById('record').innerHTML = '횟수:' + this.numberOfAttempts;
@@ -112,7 +112,7 @@ let judgement = {
                 document.getElementById('out').innerHTML = "";
                 document.getElementById('record').innerHTML = "";
                 document.getElementById('succes').style.display = 'none';
-                document.querySelector('#animation img').style.display = 'block';
+                document.querySelector('#baseball_display img').style.display = 'block';
             }, 9400);
         }
     },
