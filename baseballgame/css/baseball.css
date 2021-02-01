@@ -8,6 +8,8 @@
 }
 
 body {
+    width: 100%;
+    height: 100%;
     /* 포지션 위치 기준값 */
     position: relative;
 }
