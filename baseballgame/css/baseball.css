@@ -35,7 +35,7 @@ body {
 #animation {
     margin: 0 auto;
     margin-top: 40px;
-    width: 300px;
+    width: 250px;
     height: 160px;
 }
 #animation img {
@@ -52,7 +52,7 @@ body {
 #content {
     margin: 0 auto;
     margin-top: 40px;
-    width: 300px;
+    width: 250px;
     /* 포지션 위치 기준값 */
     position: relative;
 }
@@ -68,19 +68,19 @@ body {
     outline: none;
 }
 #content #judgeBox {
-    width: 100px;
+    width: 80px;
     height: auto;
     padding: 12px;
     background-color: #000;
     /* 포지션 */
     position: absolute;
     top: 0;
-    left: 110%;
+    left: 105%;
     border: 2px solid rgb(138, 138, 138);
     box-shadow: 3px 3px 3px #000;
 }
 #content #judgeBox p {
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 8px;
 }
 #content #judgeBox #strike {
@@ -99,9 +99,9 @@ body {
     width: 100%;
 }
 #content #keypad div {
-    width: 90px;
-    height: 90px;
-    margin: 6px 5px;
+    width: 70px;
+    height: 70px;
+    margin: 6.666666px 6.666666px;
     display: inline-block;
     /* 포지션 위치 기준값 */
     position: relative;
