@@ -37,7 +37,7 @@ body {
 #animation {
     margin: 0 auto;
     margin-top: 40px;
-    width: 250px;
+    width: 230px;
     height: 160px;
 }
 #animation img {
@@ -54,7 +54,7 @@ body {
 #content {
     margin: 0 auto;
     margin-top: 40px;
-    width: 250px;
+    width: 230px;
     /* 포지션 위치 기준값 */
     position: relative;
 }
@@ -103,7 +103,7 @@ body {
 #content #keypad div {
     width: 70px;
     height: 70px;
-    margin: 6.666666px 6.666666px;
+    margin: 3.333333px 3.333333px;
     display: inline-block;
     /* 포지션 위치 기준값 */
     position: relative;
