@@ -75,10 +75,12 @@ let judgement = {
                 let delNumber = document.getElementById('del');
                 let checkData = this.dataset.num;
                 if(this == throwBall){
-                    judgement.drawJudgement();
-                    document.querySelectorAll('.flip_ball').forEach(function(flipBall){
-                        flipBall.setAttribute('class', '');
-                    });
+                    if(document.getElementById('textbox').value.length == 3){
+                        judgement.drawJudgement();
+                        document.querySelectorAll('.flip_ball').forEach(function(flipBall){
+                            flipBall.setAttribute('class', '');
+                        });
+                    }
                 }else if(this == delNumber){
                     document.getElementById('textbox').value = "";
                     document.querySelectorAll('.flip_ball').forEach(function(flipBall){
