@@ -3,13 +3,46 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    /* 포지션 위치 기준값 */
+    position: relative;
+}
+
+#start_img {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* 포지션 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+#start_img img {
+    width: 60%;
+    height: auto;
+    /* 포지션 */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 }
 
 #animation {
     margin: 0 auto;
     margin-top: 40px;
     width: 300px;
-    height: 150px;
+    height: 160px;
+}
+#animation img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
 }
 #animation video {
     display: none;
@@ -35,15 +68,32 @@
     outline: none;
 }
 #content #judgeBox {
-    width: 100%;
+    width: 100px;
+    height: auto;
+    padding: 12px;
+    background-color: #000;
     /* 포지션 */
     position: absolute;
     top: 0;
     left: 110%;
+    border: 2px solid rgb(138, 138, 138);
+    box-shadow: 3px 3px 3px #000;
 }
 #content #judgeBox p {
     font-size: 20px;
     margin-bottom: 8px;
+}
+#content #judgeBox #strike {
+    color: rgb(255, 255, 0);
+}
+#content #judgeBox #ball {
+    color: rgb(0, 255, 0);
+}
+#content #judgeBox #out {
+    color: red;
+}
+#content #judgeBox #record {
+    color: rgb(0, 148, 0);
 }
 #content #keypad {
     width: 100%;
