@@ -125,7 +125,7 @@ let judgement = {
                 document.getElementById('record').innerHTML = "";
                 document.getElementById('succes').style.display = 'none';
                 document.querySelector('#baseball_display img').style.display = 'block';
-            }, 9400);
+            }, 10000);
         }
     },
     
