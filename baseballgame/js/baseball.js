@@ -12,10 +12,11 @@ let prepareGame = {
     hideStartImage: function(){
         setTimeout(function(){
             document.getElementById('start_img').style.display = 'none';
-        }, 1600)
+        }, 1600);
     },    
-    drawInputBox: function(){
+    drawUserInterface: function(){
         document.getElementById('content').innerHTML =
+        // input에 직접 숫자를 키보드로 입력해도 작동되도록 onchange를 사용
         '<input id="textbox" type="textbox" maxlength="3" onchange="judgement.drawJudgement()" placeholder="중복되지 않는 숫자 3개 입력">'
         + '<div id="judgeBox"><p id="strike"></p>'
         + '<p id="ball">&nbsp;Ready</p>'
@@ -56,6 +57,17 @@ let judgement = {
             this.out++;
         }
     },
+    compareNumbers: function(){
+        // 입력된 3자리 값을 백의 자리, 십의 자리, 일의 자리를 각각 추출
+        let checkValue = document.getElementById('textbox').value;
+        let firstNumber = Math.floor(checkValue / 100);
+        let secondNumber = Math.floor((checkValue % 100) / 10);
+        let thirdNumber = (checkValue % 100) % 10;
+        
+        this.compareNumber(firstNumber, 0, 1, 2);
+        this.compareNumber(secondNumber, 1, 0, 2);
+        this.compareNumber(thirdNumber, 2, 0, 1);
+    },
     
     drawNumber: function(){
         this.numberOfAttempts++;
@@ -77,6 +89,7 @@ let judgement = {
                 let checkData = this.dataset.num;
                 // throw 버튼 클릭시 이벤트
                 if(this == throwBall){
+                    // 숫자가 3개 모두 입력되었을 때만 throw 버튼 작동
                     if(document.getElementById('textbox').value.length == 3){
                         judgement.drawJudgement();
                         document.querySelectorAll('.flip_ball').forEach(function(flipBall){
@@ -112,11 +125,13 @@ let judgement = {
 
     sucessGame: function(){
         if(judgement.strike == 3){
+            // 게임 성공시 동영상 재생 및 시도 총 횟수 표시
             document.querySelector('#baseball_display img').style.display = 'none';
             document.getElementById('succes').style.display = 'block';
             document.getElementById('succes').play();
             document.getElementById('record').innerHTML = '횟수:' + this.numberOfAttempts;
             this.numberOfAttempts = 0;
+            // 성공 동영상이 끝나면 게임 초기화
             setTimeout(function(){
                 prepareGame.randomStrikeNumber();
                 document.getElementById('strike').innerHTML = "";
@@ -130,17 +145,11 @@ let judgement = {
     },
     
     drawJudgement: function(){
-        let findInput = document.getElementById('textbox').value;
-        let firstNumber = Math.floor(findInput / 100);
-        let secondNumber = Math.floor((findInput % 100) / 10);
-        let thirdNumber = (findInput % 100) % 10;
-        
-        this.compareNumber(firstNumber, 0, 1, 2);
-        this.compareNumber(secondNumber, 1, 0, 2);
-        this.compareNumber(thirdNumber, 2, 0, 1);
+        this.compareNumbers();
         this.drawNumber();
         this.sucessGame();
 
+        // 값 초기화
         this.strike = 0;
         this.ball = 0;
         this.out = 0;
@@ -150,6 +159,6 @@ let judgement = {
 
 prepareGame.randomStrikeNumber();
 prepareGame.hideStartImage();
-prepareGame.drawInputBox();
+prepareGame.drawUserInterface();
 judgement.clickKeypad();
 

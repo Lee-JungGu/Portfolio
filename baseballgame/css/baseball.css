@@ -14,6 +14,7 @@ body {
     position: relative;
 }
 
+/* 시작 이미지 영역 */
 #start_img {
     width: 100%;
     height: 100%;
@@ -34,6 +35,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* 게임 인터페이스 상단 이미지와 동영상 영역 */
 #baseball_display {
     margin: 0 auto;
     margin-top: 40px;
@@ -51,6 +53,7 @@ body {
     width: 100%;
 }
 
+/* 키패드와 전광판 영역 */
 #content {
     margin: 0 auto;
     margin-top: 40px;
@@ -118,6 +121,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    /* 버튼 뒤집기 */
     -webkit-backface-visibility: visible; /* Safari */
     backface-visibility: visible;
     transition: 0.5s;
@@ -133,6 +137,7 @@ body {
     left: 0;
     top: 0;
     z-index: 9;
+    /* 버튼 뒤집기 */
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
     transition: 0.5s;
@@ -146,8 +151,7 @@ body {
     outline: none;
 }
 
-
-
+/* 뒤집는 애니메이션 클래스 */
 .flip_ball {
     transform: rotateY(180deg);
 }
