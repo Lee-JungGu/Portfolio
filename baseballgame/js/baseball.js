@@ -86,17 +86,20 @@ let judgement = {
             keyButton.addEventListener('click', function(){
                 let throwBall = document.getElementById('throw');
                 let delNumber = document.getElementById('del');
+                let enteredNumber = document.getElementById('textbox');
                 let checkData = this.dataset.num;
+
                 // throw 버튼 클릭시 이벤트
                 if(this == throwBall){
                     // 숫자가 3개 모두 입력되었을 때만 throw 버튼 작동
-                    if(document.getElementById('textbox').value.length == 3){
+                    if(enteredNumber.value.length == 3){
                         judgement.drawJudgement();
                         document.querySelectorAll('.flip_ball').forEach(function(flipBall){
                             flipBall.setAttribute('class', '');
                         });
                     }
                 }
+
                 // del 버튼 클릭시 이벤트
                 if(this == delNumber){
                     document.getElementById('textbox').value = "";
@@ -104,10 +107,12 @@ let judgement = {
                         flipBall.setAttribute('class', '');
                     });
                 }
+
                 // 3개 이상의 숫자가 입력되지 않도록 방지
-                if(document.getElementById('textbox').value.length < 3){
-                    document.getElementById('textbox').value += this.dataset.num;
+                if(enteredNumber.value.length < 3){
+                    enteredNumber.value += checkData;
                 }
+
                 // throw 버튼과 del 버튼을 제외한 버튼만 뒤집히는 애니메이션 적용
                 if(!checkData == ""){
                     if(document.getElementsByClassName('flip_ball').length < 6){
@@ -115,6 +120,7 @@ let judgement = {
                         this.nextSibling.setAttribute('class', 'flip_ball');
                     }
                 }
+                
                 // 게임 규칙 설명 버튼 클릭시 이벤트
                 if(this == document.getElementById('game_info')){
                     alert('게임규칙 : 0~9까지 중복되지 않는 3개의 숫자를 숫자와 순서 모두 맞추는 게임 \n 1. 중복되지 않는 숫자 3개를 골라 Throw를 눌러주세요. \n 2. 숫자 3개 중 정답 숫자와 일치하고 순서까지 맞으면 Strike 정답 숫자와 일치하지만 순서가 맞지 않으면 Ball 해당되는 숫자가 없으면 Out입니다. \n 3. 3 Strike가 되면 게임 성공~!');
