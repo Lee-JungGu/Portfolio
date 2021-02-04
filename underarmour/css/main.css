@@ -96,7 +96,8 @@
     margin-bottom: 12px;
 }
 .best_seller .horizontal_slider .best_seller_box h2 {
-    margin-bottom: 24px;
+    width: 346.6666666666667px;
+    height: 40px;
 }
 .best_seller .horizontal_slider .best_seller_box p {
     font-size: 20px;
@@ -166,6 +167,9 @@
     .best_seller .horizontal_slider .best_seller_box img {
         width: 100%;
         margin-bottom: 12px;
+    }
+    .best_seller .horizontal_slider .best_seller_box h2 {
+        width: 100%;
     }
     /*슬릭 CSS*/
     .slider .slick-list {
@@ -276,6 +280,9 @@
     .best_seller .horizontal_slider .best_seller_box img {
         width: 100%;
         margin-bottom: 12px;
+    }
+    .best_seller .horizontal_slider .best_seller_box h2 {
+        width: 100%;
     }
     /*슬릭 CSS*/
     .slider .slick-list {

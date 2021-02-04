@@ -67,7 +67,8 @@
     margin-bottom: 12px;
 }
 .best_seller .horizontal_slider .best_seller_box h2 {
-    margin-bottom: 24px;
+    width: 346.6666666666667px;
+    height: 40px;
 }
 .best_seller .horizontal_slider .best_seller_box p {
     font-size: 20px;
@@ -157,6 +158,9 @@
         margin-bottom: 200px;
     }
     .best_seller .horizontal_slider .best_seller_box {
+        width: 100%;
+    }
+    .best_seller .horizontal_slider .best_seller_box h2 {
         width: 100%;
     }
     .best_seller .horizontal_slider .best_seller_box img {
@@ -282,6 +286,9 @@
         margin-bottom: 150px;
     }
     .best_seller .horizontal_slider .best_seller_box {
+        width: 100%;
+    }
+    .best_seller .horizontal_slider .best_seller_box h2 {
         width: 100%;
     }
     .best_seller .horizontal_slider .best_seller_box img {
