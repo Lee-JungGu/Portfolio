@@ -37,15 +37,16 @@
 .men_menu .menu_box ul li {
     margin-bottom: 20px;
 }
-.men_menu .menu_box button {
+.men_menu .menu_box .new_button {
     width: 100%;
     border-radius: 6px;
 }
-.men_menu .menu_box button a {
+.men_menu .menu_box .new_button a {
     width: 100%;
     display: block;
     background-color: #fff;
     font-size: 14px;
+    text-align: center;
     color: #0a0a0a;
     padding: 8px 0;
     border-radius: 6px;
@@ -105,16 +106,18 @@
     font-size: 18px;
     font-weight: 500;
 }
-.men_event button {
+.men_event .event_button {
     font-family: 'Noto Sans KR', sans-serif;
+    margin: 0 auto;
     margin-top: 24px;
     width: 150px;
     height: 48px;
+    line-height: 46px;
     border-radius: 24px;
     background-color: #0a0a0a;
     color: #f5f5f5;
 }
-.men_event button a {
+.men_event .event_button a {
     display: block;
     width: 100%;
 }
