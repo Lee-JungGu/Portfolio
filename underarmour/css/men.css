@@ -190,6 +190,7 @@
         width: 100%;
         margin: 0 auto;
         margin-bottom: 100px;
+        overflow: hidden;
     }
     .men_menu .main_img {
         width: 152%;
