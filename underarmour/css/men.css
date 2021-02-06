@@ -240,7 +240,7 @@
     .men_menu .menu_box ul li:first-child {
         border-top: 1px solid #000;
     }
-    .men_menu .menu_box button {
+    .men_menu .menu_box .new_button {
         width: 140px;
         /* 포지션 */
         position: absolute;
