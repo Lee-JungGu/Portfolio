@@ -107,10 +107,10 @@
 }
 /*슬릭 CSS*/
 .slider .slick-list {
-    margin:0 -30px;
+    margin:0 -20px;
 }
 .slick-slide {
-    margin:0 30px;
+    margin:0 20px;
 }
 
 
