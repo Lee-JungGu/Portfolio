@@ -97,7 +97,7 @@ var topButtonEvent = {
                     },
     clickMoveTop: function(clickTag){
                         $(clickTag).click(function(){
-                            $('body').stop().animate({ scrollTop: $(this.hash).offset().top }, 800, 'swing');
+                            $('body').stop().animate({ scrollTop: 0 }, 800, 'swing');
                         });
                 },
     
