@@ -51,22 +51,22 @@ var filterEvents = {
     addColorFilter: function (){
         $('.color_circles .circle').on("click", function(){
             var checkColor = $(this).data().color;
-                checkOverlap = $('.filter_filter .content_box p').text().indexOf(checkColor);
+                checkOverlap = $('.filter_filter .content_box button').text().indexOf(checkColor);
             if(checkOverlap < 0){
-            $('.filter_filter .content_box').append(
-                '<button class="hide_button">' + checkColor + ' X</button>'
-                );
+                $('.filter_filter .content_box').append(
+                    '<button class="hide_button">' + checkColor + ' X</button>'
+                    );
             }
         });
     },
     addSizeFilter: function (){
         $('.size_box').on("click", function(){
             var checkSize = $(this).data().size;
-                checkOverlap = $('.filter_filter .content_box p').text().indexOf(checkSize);
+                checkOverlap = $('.filter_filter .content_box button').text().indexOf(checkSize);
             if(checkOverlap < 0){
-            $('.filter_filter .content_box').append(
-                '<button class="hide_button">' + checkSize + ' X</button>'
-                );
+                $('.filter_filter .content_box').append(
+                    '<button class="hide_button">' + checkSize + ' X</button>'
+                    );
             }
         });
     },
