@@ -50,7 +50,7 @@ var filterEvents = {
     },
     addColorFilter: function (){
         $('.color_circles .circle').on("click", function(){
-            var checkColor = $(this).attr('class').replace('circle ', '');
+            var checkColor = $(this).data().color;
                 checkOverlap = $('.filter_filter .content_box p').text().indexOf(checkColor);
             if(checkOverlap < 0){
             $('.filter_filter .content_box').append(
@@ -61,11 +61,11 @@ var filterEvents = {
     },
     addSizeFilter: function (){
         $('.size_box').on("click", function(){
-            var checkText = $(this).text();
-                checkOverlap = $('.filter_filter .content_box p').text().indexOf(checkText);
+            var checkSize = $(this).data().size;
+                checkOverlap = $('.filter_filter .content_box p').text().indexOf(checkSize);
             if(checkOverlap < 0){
             $('.filter_filter .content_box').append(
-                '<button class="hide_button">' + checkText + ' X</button>'
+                '<button class="hide_button">' + checkSize + ' X</button>'
                 );
             }
         });
