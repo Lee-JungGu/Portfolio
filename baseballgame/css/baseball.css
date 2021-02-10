@@ -125,6 +125,7 @@ body {
     -webkit-backface-visibility: visible; /* Safari */
     backface-visibility: visible;
     transition: 0.5s;
+    cursor: pointer;
 }
 #content #keypad div button {
     width: 100%;
@@ -141,6 +142,7 @@ body {
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
     transition: 0.5s;
+    cursor: pointer;
 }
 #content #keypad #game_info {
     width: 100%;
