@@ -97,11 +97,11 @@ const player = {
         }
     },
     informCard: function (object, clickImg){
-        player.cardData[object] = {}
-        player.cardData[object].backOfCardNumber = $(clickImg).index();
-        player.cardData[object].cardData = frontOfCardImgs.eq(player.cardData[object].backOfCardNumber).attr('data-num');
-        player.cardData[object].frontOfCardImg = frontOfCardImgs.eq(player.cardData[object].backOfCardNumber);
-        player.cardData[object].backOfCardImg = $(clickImg);
+        this.cardData[object] = {}
+        this.cardData[object].backOfCardNumber = $(clickImg).index();
+        this.cardData[object].cardData = frontOfCardImgs.eq(this.cardData[object].backOfCardNumber).attr('data-num');
+        this.cardData[object].frontOfCardImg = frontOfCardImgs.eq(this.cardData[object].backOfCardNumber);
+        this.cardData[object].backOfCardImg = $(clickImg);
     },
     playGame: function (){
         $('.backOfCards img').click(function(){
