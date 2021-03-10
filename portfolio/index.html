@@ -1,197 +1,283 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,html5,css3,자바스크립트,제이쿼리,리액트">
-    <meta name="description" content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,html5,css3,자바스크립트,제이쿼리,리액트">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/notosans_kr_CDN.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,html5,css3,자바스크립트,제이쿼리,리액트"
+    />
+    <meta
+      name="description"
+      content="웹에이전시,반응형웹개발,웹디자인,웹프로그래밍,워드프레스,html5,css3,자바스크립트,제이쿼리,리액트"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if lt IE 9
+      ]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script
+    ><![endif]-->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/notosans_kr_CDN.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png" />
     <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.src.js"></script><![endif]-->
     <!--[if lt IE 10]><script src="js/PIE.js"></script><![endif]-->
     <title>LJG Portfolio | Main</title>
     <!--슬릭 CSS-->
-    <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
     <!--데이 나이트모드 CSS-->
-    <link id="colorMode" rel="stylesheet" href="css/day_mode.css">
+    <link id="colorMode" rel="stylesheet" href="css/day_mode.css" />
     <!--공통 CSS-->
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common.css" />
     <!--메인 페이지 CSS-->
-    <link rel="stylesheet" href="css/pf_main.css">
-<!--제이쿼리 코어 플러그인-->
+    <link rel="stylesheet" href="css/pf_main.css" />
+    <!--제이쿼리 코어 플러그인-->
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!--슬릭 슬라이더 플러그인-->
+    <!--슬릭 슬라이더 플러그인-->
     <script src="slick/slick.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="wrap">
-        <!--1. 헤더영역 시작-->
-        <header class="header">
-        </header>
-        <!--1. 헤더영역 끝-->
-        <!--2. 왼쪽 GNB 영역 시작-->
-        <nav class="left_gnb">
-        </nav>
-        <!--2. 왼쪽 GNB 영역 시작-->
-        <!--3. 우측 상단 GNB 영역 시작-->
-        <nav class="top_gnb cf">
-        </nav>
-        <!--3. 우측 상단 GNB 영역 끝-->
-        <!--top버튼 영역 시작-->
-        <div class="top_button">
-        </div>
-        <!--top버튼 영역 끝-->
-        <!--4. 컨텐츠 영역 시작-->
-        <div id="content">
-            <!--4-1. 메인 텍스트 영역 시작-->
-            <section class="main_text">
-                <h2>성실하고 책임감 있는</h2>
-                <h2>모두에게 도움이 될 수 있는 사람</h2>
-                <h2>웹퍼블리셔 이정구입니다.</h2>
-            </section>
-            <!--4-1. 메인 텍스트 영역 끝-->
-            <!--4-2. 프로젝트 영역 시작-->
-            <section class="projects">
-                <div class="projects_title cf">
-                    <h2>Projects</h2>
-                    <div class="view_all">
-                        <a href="projects.html">
-                            <img src="images/arrow.png" alt="우측화살표" class="day_img">
-                            <img src="images/arrow_night.png" alt="우측화살표" class="night_img">
-                            <p>All</p>
-                        </a>
-                    </div>
-                </div>
-                <ul class="slider_contents">
-                    <li class="project_content">
-                        <a href="project_underarmour.html"><img src="images/projects_underarmour.jpg" alt="언더아머이미지"></a>
-                        <p>Under&nbsp;Armour - Responsive&nbsp;web</p>
-                    </li>
-                    <li class="project_content">
-                        <a href="project_portfolio.html"><img src="images/projects_portfolio.jpg" alt="포트폴리오페이지이미지"></a>
-                        <p>Portfolio&nbsp;site - Responsive&nbsp;web</p>
-                    </li>
-                    <li class="project_content">
-                        <a href="project_baseballgame.html"><img src="images/projects_baseballgame.jpg" alt="야구게임이미지"></a>
-                        <p>Baseball&nbsp;Game - Game</p>
-                    </li>
-                    <li class="project_content">
-                        <a href="project_cardgame.html"><img src="images/projects_cardgame.jpg" alt="카드게임이미지"></a>
-                        <p>Card&nbsp;Game - Game</p>
-                    </li>
-                    <li class="project_content">
-                        <a href="project_starcraft.html"><img src="images/projects_starcraft.jpg" alt="스타크래프트이미지"></a>
-                        <p>Starcraft&nbsp;II - PC&nbsp;web</p>
-                    </li>
-                    <li class="project_content">
-                        <a href="project_soundscape.html"><img src="images/projects_soundscape.jpg" alt="사운드스케이프이미지"></a>
-                        <p>Sound&nbsp;Scape - PC,&nbsp;Mobile&nbsp;web</p>
-                    </li>
-                    <li class="project_content">
-                        <a href="project_bianchi.html"><img src="images/projects_bianchi.jpg" alt="비앙키이미지"></a>
-                        <p>Bianchi - Responsive&nbsp;web</p>
-                    </li>
-                    <li class="project_content">
-                        <a href="project_dccomics.html"><img src="images/projects_dccomics.jpg" alt="디씨코믹스이미지"></a>
-                        <p>DC&nbsp;COMICS - PC&nbsp;web</p>
-                    </li>
-                    <li class="project_content">
-                        <a href="project_batman.html"><img src="images/projects_batman.jpg" alt="배트맨이미지"></a>
-                        <p>THE&nbsp;BATMAN - PC&nbsp;web</p>
-                    </li>
-                </ul>
-            </section>
-            <!--4-2. 프로젝트 영역 끝-->
-            <!--4-3. 어빌리티 영역 시작-->
-            <section id="abilities" class="abilities">
-                <h2>Abilities</h2>
-                <div class="skills_box cf">
-                    <img src="images/HTML5.png" alt="html5이미지" class="day_img">
-                    <img src="images/HTML5_night.png" alt="html5이미지" class="night_img">
-                    <img src="images/CSS3.png" alt="html5이미지" class="day_img">
-                    <img src="images/CSS3_night.png" alt="html5이미지" class="night_img">
-                    <video muted>
-                            <source src="images/ability_video_01.mp4" type="video/mp4">
-                    </video>
-                    <div class="abilities_text">
-                        <h3>HTML5&nbsp;&amp;&nbsp;CSS3</h3>
-                        <ul>
-                            <li>웹 표준과 접근성을 고려한 웹 구현.</li>
-                            <li>구조의 깊은 이해와 float, flex 활용.</li>
-                            <li>다양한 애니메이션 효과의 구현.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="skills_box cf">
-                    <img src="images/JavaScript.png" alt="javascript이미지" class="day_img">
-                    <img src="images/JavaScript_night.png" alt="javascript이미지" class="night_img">
-                    <img src="images/jQuery.png" alt="jquery이미지" class="day_img">
-                    <img src="images/jQuery_night.png" alt="jquery이미지" class="night_img">
-                    <video muted>
-                            <source src="images/ability_video_02.mp4" type="video/mp4">
-                    </video>
-                    <div class="abilities_text">
-                        <h3>JavaScript&nbsp;&amp;&nbsp;jQuery</h3>
-                        <ul>
-                            <li>경우의 수를 고려한 이벤트들의 구현.</li>
-                            <li>메소드화, 객체화 시켜 코드들을 정리.</li>
-                            <li>네이밍과 코드 단순화에 대한 고찰.</li>
-                            <li>React 작업 환경 구축 및 작동원리 이해.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="skills_box cf">
-                    <img src="images/Photoshop.png" alt="포토샵이미지" class="day_img">
-                    <img src="images/Photoshop_night.png" alt="포토샵이미지" class="night_img">
-                    <img src="images/Illustrator.png" alt="일러스트이미지" class="day_img">
-                    <img src="images/Illustrator_night.png" alt="일러스트이미지" class="night_img">
-                    <video muted>
-                            <source src="images/ability_video_03.mp4" type="video/mp4">
-                    </video>
-                    <div class="abilities_text">
-                        <h3>Photoshop&nbsp;&amp;&nbsp;Illustrator</h3>
-                        <ul>
-                            <li>프로토타입&nbsp;작업.</li>
-                            <li>간단한&nbsp;디자인&nbsp;작업.</li>
-                            <li>아이콘,&nbsp;이미지&nbsp;작업 및 수정.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!--4-3. 어빌리티 영역 끝-->
-            <!--4-4. 어바웃미 영역 시작-->
-            <section class="about_me cf">
-                <h2>About&nbsp;Me</h2>
-                <p>
-                    &nbsp;&nbsp;하고자하는 일이나 주어진 일에 대하여 집중하고 몰두하는 성향이 있고 감정적인 부분 보다는 이성적인 부분이 더 많은 사람입니다. 그동안 선택했던 진로에서 많은 시행착오를 겪었고 그 경험 하나하나가 모두 성정할 수 있었던 원동력이었습니다. 앞으로 웹개발 분야에서 실력있고 인정받는 사람이 될 수 있도록 그 경험들을 바탕으로 나아갈 것 입니다.
-                </p>
-                <div class="about_me_btn">
-                    <a href="about.html">About&nbsp;more&nbsp;></a>
-                </div>
-            </section>
-            <!--4-4. 어바웃미 영역 끝-->
-            <!--4-5. 컨택트 영역 시작-->
-            <section class="contact cf">
-            </section>
-            <!--4-5. 컨택트 영역 끝-->
-        </div>
-        <!--4. 컨텐츠 영역 끝-->
+      <!--1. 헤더영역 시작-->
+      <header class="header"></header>
+      <!--1. 헤더영역 끝-->
+      <!--2. 왼쪽 GNB 영역 시작-->
+      <nav class="left_gnb"></nav>
+      <!--2. 왼쪽 GNB 영역 시작-->
+      <!--3. 우측 상단 GNB 영역 시작-->
+      <nav class="top_gnb cf"></nav>
+      <!--3. 우측 상단 GNB 영역 끝-->
+      <!--top버튼 영역 시작-->
+      <div class="top_button"></div>
+      <!--top버튼 영역 끝-->
+      <!--4. 컨텐츠 영역 시작-->
+      <div id="content">
+        <!--4-1. 메인 텍스트 영역 시작-->
+        <section class="main_text">
+          <h2>성실하고 책임감 있는</h2>
+          <h2>모두에게 도움이 될 수 있는 사람</h2>
+          <h2>웹퍼블리셔 이정구입니다.</h2>
+        </section>
+        <!--4-1. 메인 텍스트 영역 끝-->
+        <!--4-2. 프로젝트 영역 시작-->
+        <section class="projects">
+          <div class="projects_title cf">
+            <h2>Projects</h2>
+            <div class="view_all">
+              <a href="projects.html">
+                <img src="images/arrow.png" alt="우측화살표" class="day_img" />
+                <img
+                  src="images/arrow_night.png"
+                  alt="우측화살표"
+                  class="night_img"
+                />
+                <p>All</p>
+              </a>
+            </div>
+          </div>
+          <ul class="slider_contents">
+            <li class="project_content">
+              <a href="project_jgmovies.html"
+                ><img
+                  src="images/projects_jgmovies.jpg"
+                  alt="제이지무비스이미지"
+              /></a>
+              <p>JG&nbsp;Movies - Responsive&nbsp;web</p>
+            </li>
+            <li class="project_content">
+              <a href="project_underarmour.html"
+                ><img
+                  src="images/projects_underarmour.jpg"
+                  alt="언더아머이미지"
+              /></a>
+              <p>Under&nbsp;Armour - Responsive&nbsp;web</p>
+            </li>
+            <li class="project_content">
+              <a href="project_portfolio.html"
+                ><img
+                  src="images/projects_portfolio.jpg"
+                  alt="포트폴리오페이지이미지"
+              /></a>
+              <p>Portfolio&nbsp;site - Responsive&nbsp;web</p>
+            </li>
+            <li class="project_content">
+              <a href="project_baseballgame.html"
+                ><img
+                  src="images/projects_baseballgame.jpg"
+                  alt="야구게임이미지"
+              /></a>
+              <p>Baseball&nbsp;Game - Game</p>
+            </li>
+            <li class="project_content">
+              <a href="project_cardgame.html"
+                ><img src="images/projects_cardgame.jpg" alt="카드게임이미지"
+              /></a>
+              <p>Card&nbsp;Game - Game</p>
+            </li>
+            <li class="project_content">
+              <a href="project_starcraft.html"
+                ><img
+                  src="images/projects_starcraft.jpg"
+                  alt="스타크래프트이미지"
+              /></a>
+              <p>Starcraft&nbsp;II - PC&nbsp;web</p>
+            </li>
+            <li class="project_content">
+              <a href="project_soundscape.html"
+                ><img
+                  src="images/projects_soundscape.jpg"
+                  alt="사운드스케이프이미지"
+              /></a>
+              <p>Sound&nbsp;Scape - PC,&nbsp;Mobile&nbsp;web</p>
+            </li>
+            <li class="project_content">
+              <a href="project_bianchi.html"
+                ><img src="images/projects_bianchi.jpg" alt="비앙키이미지"
+              /></a>
+              <p>Bianchi - Responsive&nbsp;web</p>
+            </li>
+            <li class="project_content">
+              <a href="project_dccomics.html"
+                ><img src="images/projects_dccomics.jpg" alt="디씨코믹스이미지"
+              /></a>
+              <p>DC&nbsp;COMICS - PC&nbsp;web</p>
+            </li>
+            <li class="project_content">
+              <a href="project_batman.html"
+                ><img src="images/projects_batman.jpg" alt="배트맨이미지"
+              /></a>
+              <p>THE&nbsp;BATMAN - PC&nbsp;web</p>
+            </li>
+          </ul>
+        </section>
+        <!--4-2. 프로젝트 영역 끝-->
+        <!--4-3. 어빌리티 영역 시작-->
+        <section id="abilities" class="abilities">
+          <h2>Abilities</h2>
+          <div class="skills_box cf">
+            <img src="images/HTML5.png" alt="html5이미지" class="day_img" />
+            <img
+              src="images/HTML5_night.png"
+              alt="html5이미지"
+              class="night_img"
+            />
+            <img src="images/CSS3.png" alt="html5이미지" class="day_img" />
+            <img
+              src="images/CSS3_night.png"
+              alt="html5이미지"
+              class="night_img"
+            />
+            <video muted>
+              <source src="images/ability_video_01.mp4" type="video/mp4" />
+            </video>
+            <div class="abilities_text">
+              <h3>HTML5&nbsp;&amp;&nbsp;CSS3</h3>
+              <ul>
+                <li>웹 표준과 접근성을 고려한 웹 구현.</li>
+                <li>구조의 깊은 이해와 float, flex 활용.</li>
+                <li>다양한 애니메이션 효과의 구현.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skills_box cf">
+            <img
+              src="images/JavaScript.png"
+              alt="javascript이미지"
+              class="day_img"
+            />
+            <img
+              src="images/JavaScript_night.png"
+              alt="javascript이미지"
+              class="night_img"
+            />
+            <img src="images/jQuery.png" alt="jquery이미지" class="day_img" />
+            <img
+              src="images/jQuery_night.png"
+              alt="jquery이미지"
+              class="night_img"
+            />
+            <video muted>
+              <source src="images/ability_video_02.mp4" type="video/mp4" />
+            </video>
+            <div class="abilities_text">
+              <h3>JavaScript&nbsp;&amp;&nbsp;jQuery</h3>
+              <ul>
+                <li>경우의 수를 고려한 이벤트들의 구현.</li>
+                <li>메소드화, 객체화 시켜 코드들을 정리.</li>
+                <li>네이밍과 코드 단순화에 대한 고찰.</li>
+                <li>React 작업 환경 구축 및 작동원리 이해.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="skills_box cf">
+            <img
+              src="images/Photoshop.png"
+              alt="포토샵이미지"
+              class="day_img"
+            />
+            <img
+              src="images/Photoshop_night.png"
+              alt="포토샵이미지"
+              class="night_img"
+            />
+            <img
+              src="images/Illustrator.png"
+              alt="일러스트이미지"
+              class="day_img"
+            />
+            <img
+              src="images/Illustrator_night.png"
+              alt="일러스트이미지"
+              class="night_img"
+            />
+            <video muted>
+              <source src="images/ability_video_03.mp4" type="video/mp4" />
+            </video>
+            <div class="abilities_text">
+              <h3>Photoshop&nbsp;&amp;&nbsp;Illustrator</h3>
+              <ul>
+                <li>프로토타입&nbsp;작업.</li>
+                <li>간단한&nbsp;디자인&nbsp;작업.</li>
+                <li>아이콘,&nbsp;이미지&nbsp;작업 및 수정.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!--4-3. 어빌리티 영역 끝-->
+        <!--4-4. 어바웃미 영역 시작-->
+        <section class="about_me cf">
+          <h2>About&nbsp;Me</h2>
+          <p>
+            &nbsp;&nbsp;하고자하는 일이나 주어진 일에 대하여 집중하고 몰두하는
+            성향이 있고 감정적인 부분 보다는 이성적인 부분이 더 많은 사람입니다.
+            그동안 선택했던 진로에서 많은 시행착오를 겪었고 그 경험 하나하나가
+            모두 성정할 수 있었던 원동력이었습니다. 앞으로 웹개발 분야에서
+            실력있고 인정받는 사람이 될 수 있도록 그 경험들을 바탕으로 나아갈 것
+            입니다.
+          </p>
+          <div class="about_me_btn">
+            <a href="about.html">About&nbsp;more&nbsp;></a>
+          </div>
+        </section>
+        <!--4-4. 어바웃미 영역 끝-->
+        <!--4-5. 컨택트 영역 시작-->
+        <section class="contact cf"></section>
+        <!--4-5. 컨택트 영역 끝-->
+      </div>
+      <!--4. 컨텐츠 영역 끝-->
     </div>
-</body>
+  </body>
 </html>
 <!--공통 JS-->
 <script src="js/common.js"></script>
 <!--메인 JS-->
 <script src="js/pf_main.js"></script>
-
