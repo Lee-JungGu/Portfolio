@@ -1,159 +1,169 @@
 @charset "utf-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    /* 포지션 위치 기준값 */
-    position: relative;
+  width: 100%;
+  height: 100%;
+  /* 포지션 위치 기준값 */
+  position: relative;
 }
 
 /* 시작 이미지 영역 */
 #start_img {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    /* 포지션 */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  /* 포지션 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 #start_img img {
-    width: 60%;
-    height: auto;
-    /* 포지션 */
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
+  width: 60%;
+  height: auto;
+  /* 포지션 */
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
 
 /* 게임 인터페이스 상단 이미지와 동영상 영역 */
 #baseball_display {
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 210px;
-    height: 100px;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 210px;
+  height: 100px;
 }
 #baseball_display img {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
 }
 #baseball_display video {
-    display: none;
-    width: 100%;
+  display: none;
+  width: 100%;
 }
 
 /* 키패드와 전광판 영역 */
 #content {
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 210px;
-    /* 포지션 위치 기준값 */
-    position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 210px;
+  /* 포지션 위치 기준값 */
+  position: relative;
 }
 #content input {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    height: 60px;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    outline: none;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 60px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  outline: none;
 }
 #content input::placeholder {
-    font-size: 14px;
+  font-size: 14px;
 }
 #content #judgeBox {
-    width: 80px;
-    height: auto;
-    padding: 12px;
-    background-color: #000;
-    /* 포지션 */
-    position: absolute;
-    top: 0;
-    left: 105%;
-    border: 2px solid rgb(138, 138, 138);
-    box-shadow: 3px 3px 3px #000;
+  width: 80px;
+  height: auto;
+  padding: 12px;
+  background-color: #000;
+  /* 포지션 */
+  position: absolute;
+  top: 0;
+  left: 105%;
+  border: 2px solid rgb(138, 138, 138);
+  box-shadow: 3px 3px 3px #000;
 }
 #content #judgeBox p {
-    font-size: 15px;
-    margin-bottom: 8px;
+  font-size: 15px;
+  margin-bottom: 8px;
 }
 #content #judgeBox #strike {
-    color: rgb(255, 255, 0);
+  color: rgb(255, 255, 0);
 }
 #content #judgeBox #ball {
-    color: rgb(0, 255, 0);
+  color: rgb(0, 255, 0);
 }
 #content #judgeBox #out {
-    color: red;
+  color: red;
 }
 #content #judgeBox #record {
-    color: rgb(0, 148, 0);
+  color: rgb(0, 148, 0);
 }
 #content #keypad {
-    width: 100%;
+  width: 100%;
 }
-#content #keypad div {
-    width: 60px;
-    height: 60px;
-    margin: 5px 5px;
-    display: inline-block;
-    /* 포지션 위치 기준값 */
-    position: relative;
+/* 플롯해제 */
+#content #keypad::after {
+  content: "";
+  display: block;
+  clear: both;
 }
-#content #keypad div img {
-    width: 100%;
-    height: 100%;
-    /* 포지션 */
-    position: absolute;
-    left: 0;
-    top: 0;
-    /* 버튼 뒤집기 */
-    -webkit-backface-visibility: visible; /* Safari */
-    backface-visibility: visible;
-    transition: 0.5s;
-    cursor: pointer;
+#content #keypad > li {
+  width: 60px;
+  height: 60px;
+  margin: 5px 5px;
+  /* 플롯 */
+  float: left;
+  /* 포지션 위치 기준값 */
+  position: relative;
 }
-#content #keypad div button {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    background-color: #fff;
-    outline: none;
-    /* 포지션 */
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 9;
-    /* 버튼 뒤집기 */
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    transition: 0.5s;
-    cursor: pointer;
+#content #keypad > li > img {
+  width: 100%;
+  height: 100%;
+  /* 포지션 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* 버튼 뒤집기 */
+  -webkit-backface-visibility: visible; /* Safari */
+  backface-visibility: visible;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#content #keypad > li > button {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #fff;
+  outline: none;
+  /* 포지션 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  /* 버튼 뒤집기 */
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  transition: 0.5s;
+  cursor: pointer;
 }
 #content #keypad #game_info {
-    width: 100%;
-    height: 60px;
-    margin-top: 5px;
-    border-radius: 30px;
-    background-color: #fff;
-    outline: none;
+  width: 100%;
+  height: 60px;
+  margin-top: 5px;
+  border-radius: 30px;
+  background-color: #fff;
+  outline: none;
 }
 
 /* 뒤집는 애니메이션 클래스 */
 .flip_ball {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
